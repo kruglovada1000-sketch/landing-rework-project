@@ -192,7 +192,7 @@ const Index = () => {
             <CardContent className="p-8">
               <div className="space-y-8">
                 <div>
-                  <label className="block text-lg mb-4">Количество гостей: <span className="text-gold font-bold">{guestCount[0]}</span></label>
+                  <label className="block text-lg mb-4" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)'}}>Количество гостей: <span className="text-gold font-bold">{guestCount[0]}</span></label>
                   <Slider
                     value={guestCount}
                     onValueChange={setGuestCount}
@@ -201,14 +201,14 @@ const Index = () => {
                     step={10}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-sm text-gray-400 mt-2">
+                  <div className="flex justify-between text-sm font-semibold mt-2" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)'}}>
                     <span>50</span>
                     <span>500</span>
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-lg mb-4">Длительность (часов): <span className="text-gold font-bold">{hours[0]}</span></label>
+                  <label className="block text-lg mb-4" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)'}}>Длительность (часов): <span className="text-gold font-bold">{hours[0]}</span></label>
                   <Slider
                     value={hours}
                     onValueChange={setHours}
@@ -217,7 +217,7 @@ const Index = () => {
                     step={1}
                     className="w-full"
                   />
-                  <div className="flex justify-between text-sm text-gray-400 mt-2">
+                  <div className="flex justify-between text-sm font-semibold mt-2" style={{textShadow: '2px 2px 4px rgba(0,0,0,0.8), -1px -1px 2px rgba(0,0,0,0.8), 1px -1px 2px rgba(0,0,0,0.8), -1px 1px 2px rgba(0,0,0,0.8)'}}>
                     <span>2</span>
                     <span>12</span>
                   </div>
