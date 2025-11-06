@@ -253,28 +253,21 @@ const Index = () => {
                 <Icon name="Phone" className="text-gold mt-1" size={24} />
                 <div>
                   <p className="font-semibold">Телефон</p>
-                  <a href="tel:+74951234567" className="text-gray-300 hover:text-gold transition-colors">+7 (495) 123-45-67</a>
+                  <a href="tel:+79250474225" className="text-gray-300 hover:text-gold transition-colors">+7 (925) 047-42-25</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Icon name="Mail" className="text-gold mt-1" size={24} />
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:info@premium-security.ru" className="text-gray-300 hover:text-gold transition-colors">info@premium-security.ru</a>
+                  <a href="mailto:fizohrana@ruscor24.ru" className="text-gray-300 hover:text-gold transition-colors">fizohrana@ruscor24.ru</a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Icon name="MapPin" className="text-gold mt-1" size={24} />
                 <div>
                   <p className="font-semibold">Адрес</p>
-                  <p className="text-gray-300">г. Москва, ул. Тверская, д. 1</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <Icon name="Clock" className="text-gold mt-1" size={24} />
-                <div>
-                  <p className="font-semibold">Режим работы</p>
-                  <p className="text-gray-300">24/7 без выходных</p>
+                  <p className="text-gray-300">г. Москва, ул. Новая дорога д. 9, к2</p>
                 </div>
               </div>
             </div>
@@ -291,16 +284,6 @@ const Index = () => {
                       type="tel" 
                       placeholder="Телефон" 
                       className="bg-darker border-gold/20 focus:border-gold"
-                    />
-                    <Input 
-                      type="email" 
-                      placeholder="Email" 
-                      className="bg-darker border-gold/20 focus:border-gold"
-                    />
-                    <textarea 
-                      placeholder="Ваше сообщение" 
-                      rows={4}
-                      className="w-full px-3 py-2 bg-darker border border-gold/20 rounded-md focus:border-gold focus:outline-none text-white"
                     />
                     <Button className="w-full bg-gold hover:bg-gold/90 text-dark font-semibold">
                       Отправить заявку
