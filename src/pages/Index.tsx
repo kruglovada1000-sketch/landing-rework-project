@@ -42,7 +42,7 @@ const Index = () => {
                 alt="Logo" 
                 className="h-12 w-auto"
               />
-              <span className="text-2xl font-bold text-gold">PREMIUM SECURITY</span>
+              <span className="text-xl md:text-2xl font-bold text-gold">Рускорпорация охрана и консалтинг</span>
             </div>
             <div className="hidden md:flex space-x-8">
               {['Главная', 'Преимущества', 'Услуги', 'Отзывы', 'Калькулятор', 'Контакты'].map((item) => (
