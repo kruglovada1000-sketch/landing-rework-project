@@ -36,13 +36,13 @@ const Index = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-2 max-w-full">
               <img 
                 src="https://cdn.poehali.dev/files/877bbef8-2114-474f-8e32-ebd709ccef63.png" 
                 alt="Logo" 
-                className="h-12 w-auto"
+                className="h-10 md:h-12 w-auto flex-shrink-0"
               />
-              <span className="text-xl md:text-2xl font-bold text-gold">Рускорпорация охрана и консалтинг</span>
+              <span className="text-sm sm:text-base md:text-2xl font-bold text-gold leading-tight">Рускорпорация охрана и консалтинг</span>
             </div>
             <div className="hidden md:flex space-x-8">
               {['Главная', 'Преимущества', 'Услуги', 'Отзывы', 'Калькулятор', 'Контакты'].map((item) => (
