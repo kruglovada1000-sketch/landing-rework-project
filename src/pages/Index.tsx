@@ -63,11 +63,11 @@ const Index = () => {
 
       <section id="главная" className="pt-32 pb-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-6xl md:text-7xl font-display font-bold mb-6 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-6 animate-fade-in leading-tight">
             Эксклюзивная охрана
             <span className="block text-gold mt-2">премиум-мероприятий</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-12 animate-fade-in">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-12 animate-fade-in">
             Профессиональная защита вашего мероприятия с гарантией безопасности и конфиденциальности
           </p>
           <div className="flex flex-wrap justify-center gap-4 animate-fade-in">
