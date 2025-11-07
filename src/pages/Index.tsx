@@ -35,14 +35,14 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-dark via-dark to-darker text-white">
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-dark/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2 max-w-full">
+          <div className="flex items-center justify-between w-full">
+            <div className="flex items-center space-x-2 flex-1 min-w-0">
               <img 
                 src="https://cdn.poehali.dev/files/877bbef8-2114-474f-8e32-ebd709ccef63.png" 
                 alt="Logo" 
-                className="h-10 md:h-12 w-auto flex-shrink-0"
+                className="h-8 md:h-12 w-auto flex-shrink-0"
               />
-              <span className="text-sm sm:text-base md:text-2xl font-bold text-gold leading-tight">Рускорпорация охрана и консалтинг</span>
+              <span className="text-xs sm:text-sm md:text-2xl font-bold text-gold leading-tight truncate">Рускорпорация охрана и консалтинг</span>
             </div>
             <div className="hidden md:flex space-x-8">
               {['Главная', 'Преимущества', 'Услуги', 'Отзывы', 'Калькулятор', 'Контакты'].map((item) => (
