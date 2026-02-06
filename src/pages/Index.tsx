@@ -14,6 +14,35 @@ const Index = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/8ac0f670-c591-46ae-93da-0724e1063871', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitMessage('Спасибо! Мы свяжемся с вами в ближайшее время.');
+        setFormData({ name: '', phone: '' });
+      } else {
+        setSubmitMessage(data.error || 'Произошла ошибка. Попробуйте позже.');
+      }
+    } catch (error) {
+      setSubmitMessage('Ошибка отправки. Проверьте подключение к интернету.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -285,7 +314,7 @@ const Index = () => {
                     setSubmitMessage('');
                     
                     try {
-                      const response = await fetch('https://functions.poehali.dev/54910eb6-f355-4ecb-986d-714b62546c8e', {
+                      const response = await fetch('https://functions.poehali.dev/8ac0f670-c591-46ae-93da-0724e1063871', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(formData)
