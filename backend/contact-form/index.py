@@ -87,7 +87,8 @@ def handler(event: dict, context) -> dict:
         msg.attach(part1)
         msg.attach(part2)
         
-        with smtplib.SMTP(smtp_host, smtp_port) as server:
+        with smtplib.SMTP(smtp_host, smtp_port, timeout=10) as server:
+            server.set_debuglevel(0)
             server.starttls()
             server.login(smtp_user, smtp_password)
             server.send_message(msg)
