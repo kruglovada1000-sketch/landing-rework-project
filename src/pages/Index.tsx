@@ -308,13 +308,19 @@ const Index = () => {
             <div>
               <Card className="bg-dark/50 border-gold/30">
                 <CardContent className="p-6">
+                  <h3 className="text-xl font-display text-gold mb-4 flex items-center gap-2">
+                    <svg className="w-6 h-6 fill-[#0088cc]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.49 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.49 3.85-1.61 4.65-1.89 5.18-1.9.11 0 .37.03.54.17.14.11.18.26.2.37.01.06.03.24.01.38z"/>
+                    </svg>
+                    НАШ ТЕЛЕГРАМ
+                  </h3>
                   <form className="space-y-4" onSubmit={async (e) => {
                     e.preventDefault();
                     setIsSubmitting(true);
                     setSubmitMessage('');
                     
                     try {
-                      const response = await fetch('https://functions.poehali.dev/8ac0f670-c591-46ae-93da-0724e1063871', {
+                      const response = await fetch('https://functions.poehali.dev/c7ce844b-e653-4fe0-a41a-8d5a65721fe1', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(formData)

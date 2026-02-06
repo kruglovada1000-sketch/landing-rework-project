@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Успешная отправка в Telegram",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тестовый клиент",
+        "phone": "+79991234567"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Пустые поля",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "",
+        "phone": ""
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
