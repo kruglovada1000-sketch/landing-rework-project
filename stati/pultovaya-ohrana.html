@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пультовая охрана: как это работает и кому нужна — ЧОО «Рускорпорация»</title>
+<meta name="description" content="Как работает пультовая охрана: датчики, пульт мониторинга, группа быстрого реагирования. Чем отличается от физической, цены от 2 500 ₽/мес и чек-лист выбора оператора. От ЧОО «Рускорпорация».">
+<link rel="canonical" href="https://ohrana.tech/stati/pultovaya-ohrana.html">
+<meta name="theme-color" content="#0D1420">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Пультовая охрана: как это работает и кому нужна">
+<meta property="og:description" content="Датчики, пульт мониторинга, ГБР: как устроена система, сколько стоит и как выбрать надёжного оператора.">
+<meta property="og:url" content="https://ohrana.tech/stati/pultovaya-ohrana.html">
+<meta property="og:site_name" content="ЧОО «Рускорпорация»">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   РУСКОРПОРАЦИЯ — DEEP OCEAN / AMBER (стиль статьи)
+   ============================================================ */
+:root{
+  --bg:#0D1420; --bg2:#101927; --panel:#141E2E; --panel2:#182536;
+  --ink:#EDF1F7; --mut:#8FA1B5; --line:rgba(237,241,247,.09);
+  --amber:#F0B24A; --amber2:#FFD37E; --amber-deep:#B97F1E;
+  --ok:#5BC58E;
+  --serif:'Cormorant',Georgia,serif;
+  --sans:'Manrope',system-ui,sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+  --shadow:0 20px 50px rgba(2,6,12,.45);
+  --content-width:800px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:16.5px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--amber);color:#171003}
+a{color:var(--amber2);text-decoration:none;transition:color .25s}
+a:hover{color:#fff}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+img{display:block;max-width:100%}
+
+/* лёгкая золотая подсветка сверху страницы */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:radial-gradient(900px 420px at 85% -8%,rgba(240,178,74,.08),transparent 60%),
+             radial-gradient(700px 400px at -10% 20%,rgba(95,136,174,.07),transparent 60%)}
+
+/* ============ ШАПКА ============ */
+.site-header{position:sticky;top:0;z-index:1000;
+  background:rgba(13,20,32,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+.header-inner{max-width:1200px;margin:0 auto;padding:11px 24px;
+  display:flex;align-items:center;gap:24px}
+.logo-block{display:flex;align-items:center;gap:12px;flex:none;color:var(--ink)}
+.logo-ic{width:42px;height:42px;border-radius:10px;flex:none;
+  background:linear-gradient(160deg,var(--amber2),var(--amber-deep));
+  display:grid;place-items:center;color:#171003;box-shadow:0 4px 16px rgba(240,178,74,.3)}
+.logo-name{font-weight:800;font-size:1rem;letter-spacing:.06em;line-height:1.15}
+.logo-tag{display:block;font-size:.67rem;letter-spacing:.14em;color:var(--mut);margin-top:1px}
+.header-right{margin-left:auto;display:flex;align-items:center;gap:18px}
+.header-247{font-size:.65rem;font-weight:800;letter-spacing:.08em;color:var(--ok);
+  border:1px solid rgba(91,197,142,.4);border-radius:100px;padding:2px 10px}
+.header-phone{font-weight:800;font-size:1rem;color:var(--ink);white-space:nowrap}
+.header-phone:hover{color:var(--amber2)}
+.btn-order{background:linear-gradient(180deg,var(--amber2),var(--amber));color:#171003;
+  padding:11px 22px;border-radius:10px;font-weight:700;font-size:.82rem;white-space:nowrap;
+  box-shadow:0 8px 24px rgba(240,178,74,.25);transition:transform .3s var(--ease),box-shadow .3s}
+.btn-order:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(240,178,74,.35);color:#171003}
+
+/* ============ МЕНЮ ============ */
+.site-nav{background:var(--bg2);border-top:1px solid var(--line);position:sticky;top:65px;z-index:900}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:2px}
+.nav-inner a{color:var(--mut);font-size:.86rem;font-weight:600;padding:12px 13px;
+  border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
+.nav-inner a:hover{color:var(--amber2);border-color:var(--amber)}
+.nav-inner a.active{color:var(--amber2);border-color:var(--amber)}
+
+/* ============ ХЛЕБНЫЕ КРОШКИ ============ */
+.breadcrumb{max-width:var(--content-width);margin:0 auto;padding:24px 24px 0;
+  font-size:.8rem;color:var(--mut)}
+.breadcrumb a{color:var(--mut)}
+.breadcrumb a:hover{color:var(--amber2)}
+.breadcrumb span{margin:0 6px;color:var(--amber)}
+
+/* ============ СТАТЬЯ ============ */
+article{max-width:var(--content-width);margin:0 auto;padding:28px 24px 64px}
+.article-label{display:inline-flex;align-items:center;gap:12px;
+  font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:14px}
+.article-label::before{content:"";width:24px;height:2px;background:var(--amber)}
+.article-label time{color:var(--mut);font-weight:600;letter-spacing:.04em;text-transform:none}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,5vw,3rem);
+  line-height:1.12;margin-bottom:16px}
+h1 em{font-style:italic;color:var(--amber2)}
+.lead{font-size:1.14rem;line-height:1.6;color:var(--mut);margin-bottom:30px}
+
+/* автор */
+.author-block{display:flex;align-items:center;gap:14px;
+  padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  margin-bottom:38px}
+.author-avatar{width:50px;height:50px;border-radius:50%;flex:none;
+  background:linear-gradient(160deg,var(--amber2),var(--amber-deep));
+  color:#171003;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1rem}
+.author-name{font-weight:700;font-size:.98rem;color:var(--ink)}
+.author-role{font-size:.8rem;color:var(--mut);margin-top:2px}
+
+.intro{margin-bottom:36px}
+.intro p{margin-bottom:14px}
+
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.4vw,2.1rem);
+  line-height:1.15;margin:52px 0 18px;letter-spacing:.005em}
+h2 em{font-style:italic;color:var(--amber2)}
+h3{font-size:1.15rem;font-weight:700;margin:32px 0 12px;color:var(--amber2)}
+p{margin-bottom:16px}
+strong{color:var(--ink);font-weight:700}
+
+ul,ol{margin:0 0 20px 22px}
+li{margin-bottom:9px;color:#C8D2DF}
+li::marker{color:var(--amber)}
+
+/* цитаты */
+blockquote{background:var(--panel);border-left:3px solid var(--amber);
+  padding:22px 26px;margin:30px 0;border-radius:0 12px 12px 0;
+  font-family:var(--serif);font-style:italic;font-weight:400;
+  font-size:1.22rem;line-height:1.5;color:var(--amber2)}
+
+/* таблица цен */
+.price-table-wrap{overflow-x:auto;margin:28px 0;border:1px solid var(--line);
+  border-radius:12px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+th{background:var(--bg2);font-weight:800;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.1em;color:var(--amber)}
+td{color:#C8D2DF}
+td:last-child,th:last-child{text-align:right;white-space:nowrap;
+  font-variant-numeric:tabular-nums;color:var(--amber2);font-weight:700}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(240,178,74,.05)}
+.table-note{font-size:.78rem;color:var(--mut);margin-top:10px}
+
+/* чек-лист */
+.checklist{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:28px;margin:28px 0}
+.checklist ul{list-style:none;margin:0;padding:0}
+.checklist li{padding:10px 0 10px 32px;position:relative;color:#C8D2DF}
+.checklist li::before{content:"\2713";position:absolute;left:2px;top:9px;
+  color:var(--ok);font-weight:800;font-size:1.05rem}
+
+/* преимущества */
+.advantages{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0}
+.adv-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;
+  padding:22px;transition:border-color .35s,transform .35s var(--ease)}
+.adv-card:hover{border-color:rgba(240,178,74,.45);transform:translateY(-3px)}
+.adv-card h3{margin:0 0 8px;font-size:1rem;color:var(--amber2)}
+.adv-card p{font-size:.86rem;color:var(--mut);margin:0}
+
+/* CTA-блок */
+.cta-section{background:linear-gradient(165deg,rgba(240,178,74,.1),transparent 45%),var(--panel);
+  border:1px solid rgba(240,178,74,.35);border-radius:16px;
+  padding:40px;margin:52px 0;text-align:center}
+.cta-section h2{margin:0 0 12px;font-size:clamp(1.5rem,3vw,1.9rem)}
+.cta-section p{color:var(--mut);font-size:1rem;margin:0 0 26px}
+.cta-form{display:flex;gap:12px;max-width:520px;margin:0 auto;flex-wrap:wrap}
+.cta-form input{flex:1;min-width:160px;padding:13px 16px;border-radius:10px;
+  background:var(--bg);border:1px solid var(--line);color:var(--ink);
+  font-family:var(--sans);font-size:.95rem;transition:border-color .3s,box-shadow .3s}
+.cta-form input:focus{border-color:var(--amber);outline:none;box-shadow:0 0 0 3px rgba(240,178,74,.15)}
+.cta-form .btn-submit{background:linear-gradient(180deg,var(--amber2),var(--amber));
+  color:#171003;border:none;padding:13px 28px;border-radius:10px;
+  font-size:.9rem;font-weight:800;cursor:pointer;white-space:nowrap;
+  box-shadow:0 8px 24px rgba(240,178,74,.25);
+  transition:transform .3s var(--ease),box-shadow .3s}
+.cta-form .btn-submit:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(240,178,74,.35)}
+.cta-form .btn-submit:disabled{opacity:.7;cursor:wait}
+.form-note{font-size:.74rem;color:var(--mut);margin-top:14px}
+.form-ok{color:var(--ok);font-size:1rem;font-weight:700;margin:0}
+
+.cta-contacts{display:flex;gap:24px;margin-top:26px;flex-wrap:wrap}
+.cta-contacts a{color:var(--amber2);font-size:.95rem;font-weight:700}
+.cta-contacts a:hover{color:#fff}
+
+.back-link{margin-top:46px;font-size:.92rem}
+.back-link a{color:var(--amber2);font-weight:700}
+
+/* ============ ФУТЕР ============ */
+.site-footer{border-top:1px solid var(--line);background:#0A101A;padding:48px 0 0;
+  margin-top:40px}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 24px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:38px}
+.footer-brand p{color:var(--mut);font-size:.85rem;margin:12px 0;max-width:300px}
+.footer-247{font-size:.77rem;font-weight:700;color:var(--ok)}
+.footer-col h4{font-size:.85rem;font-weight:800;color:var(--amber);margin-bottom:14px}
+.footer-col a{display:block;color:var(--mut);font-size:.87rem;padding:4px 0;transition:color .25s}
+.footer-col a:hover{color:var(--amber2)}
+.footer-requisites{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+  border-top:1px solid var(--line);padding:26px 0}
+.req-block h5{font-size:.78rem;font-weight:800;color:var(--amber);margin-bottom:10px}
+.req-block p{font-size:.78rem;color:var(--mut);line-height:1.7;margin:0}
+.footer-copy{border-top:1px solid var(--line);padding:18px 0;text-align:center;
+  font-size:.74rem;color:var(--mut)}
+
+/* ============ КОНСУЛЬТАНТ ============ */
+.consultant{position:fixed;bottom:22px;right:22px;z-index:1200;
+  background:var(--panel2);border:1px solid rgba(240,178,74,.4);border-radius:14px;
+  padding:22px 24px;max-width:320px;box-shadow:0 24px 60px rgba(2,6,12,.6)}
+.consultant h4{font-family:var(--serif);font-weight:500;font-size:1.2rem;
+  color:var(--ink);margin-bottom:6px}
+.consultant p{font-size:.82rem;color:var(--mut);margin-bottom:14px}
+.consultant-links{display:flex;gap:10px;flex-wrap:wrap}
+.consultant-links a{background:linear-gradient(180deg,var(--amber2),var(--amber));
+  color:#171003;padding:9px 18px;border-radius:9px;font-size:.8rem;font-weight:800;
+  transition:transform .3s var(--ease)}
+.consultant-links a:hover{transform:translateY(-2px);color:#171003}
+.consultant-links a+a{background:transparent;border:1px solid rgba(237,241,247,.25);
+  color:var(--ink)}
+.consultant-links a+a:hover{border-color:var(--amber);color:var(--amber2)}
+
+/* ============ АДАПТИВ ============ */
+@media(max-width:900px){
+  .header-phone{display:none}
+}
+@media(max-width:768px){
+  .header-inner{flex-wrap:wrap;gap:12px}
+  .btn-order{display:none}
+  .site-nav{position:static}
+  .nav-inner{overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .nav-inner a{padding:12px 10px;font-size:.8rem;white-space:nowrap}
+  .footer-grid{grid-template-columns:1fr;gap:26px}
+  .footer-requisites{grid-template-columns:1fr}
+  .advantages{grid-template-columns:1fr}
+  .cta-section{padding:28px 20px}
+  .consultant{display:none}
+  .author-block{flex-direction:row;align-items:center}
+}
+@media print{
+  .site-header,.site-nav,.consultant,.cta-section,.site-footer,.breadcrumb,.back-link{display:none}
+  body{font-size:12pt;color:#000;background:#fff}
+  body::after{display:none}
+  article{max-width:100%}
+  h1,h2,blockquote{color:#000}
+}
+</style>
+</head>
+<body>
+
+<!-- ШАПКА -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo-block" href="/">
+      <span class="logo-ic">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4Z"/></svg>
+      </span>
+      <span>
+        <span class="logo-name">Рускорпорация</span>
+        <span class="logo-tag">охрана и консалтинг</span>
+      </span>
+    </a>
+    <div class="header-right">
+      <span class="header-247">● 24/7</span>
+      <a href="tel:+79250474225" class="header-phone">+7 (925) 047-42-25</a>
+      <a href="/kontakty/" class="btn-order">Заказать охрану</a>
+    </div>
+  </div>
+</header>
+
+<!-- МЕНЮ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/">Главная</a>
+    <a href="/dogovor/">Договор</a>
+    <a href="/fizicheskaya-ohrana/">Физ. охрана</a>
+    <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+    <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+    <a href="/ohrana-pult/">Пультовая охрана</a>
+    <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+    <a href="/stati/" class="active">Статьи</a>
+    <a href="/kontakty/">Контакты</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/">Главная</a><span>/</span><a href="/stati/">Статьи</a><span>/</span>Пультовая охрана
+</div>
+
+<!-- СТАТЬЯ -->
+<article>
+  <div class="article-label">Практическое руководство <time datetime="2026-01-15">· 15 января 2026</time></div>
+  <h1>Пультовая охрана: как это работает <em>и кому нужна</em></h1>
+  <p class="lead">Всё о централизованной охране объектов — от установки датчиков до выезда группы быстрого реагирования. Разбираем, чем пультовая охрана отличается от физической, сколько она стоит и как выбрать надёжного оператора.</p>
+
+  <div class="author-block">
+    <div class="author-avatar">ПЖ</div>
+    <div>
+      <div class="author-name">Пётр Жгун</div>
+      <div class="author-role">Заместитель директора по физической охране, ЧОО «Рускорпорация»</div>
+    </div>
+  </div>
+
+  <div class="intro">
+    <p>Пультовая охрана — это не просто «сигнализация, которая звонит в полицию». Это комплексная система, которая непрерывно контролирует ваш объект и при тревоге мгновенно отправляет вооружённую группу быстрого реагирования.</p>
+    <p>В этой статье я расскажу, как устроена пультовая охрана, какие объекты она защищает, сколько стоит и на что обратить внимание при выборе оператора.</p>
+  </div>
+
+  <blockquote>«Пультовая охрана — это глаза и уши вашего объекта, которые не спят никогда. Тревожная кнопка срабатывает за секунды, а группа реагирования приезжает быстрее, чем злоумышленник успеет понять, что попался».</blockquote>
+
+  <h2>Что такое <em>пультовая охрана</em></h2>
+  <p>Пультовая охрана — это форма охраны, при которой объект оборудуется техническими средствами (датчики движения, разбития, открытия дверей, тревожные кнопки), которые по радиоканалу или проводной линии передают сигналы на централизованный пульт мониторинга. Оператор пульта круглосуточно принимает сигналы и при тревоге направляет на объект группу быстрого реагирования (ГБР).</p>
+  <p>В отличие от автономной сигнализации, которая просто включает сирену, пультовая охрана гарантирует реальный ответ — на объект приезжают вооружённые охранники с полномочиями задержать нарушителя.</p>
+
+  <h2>Чем пультовая охрана отличается <em>от физической</em></h2>
+  <p>Многие путают пультовую охрану с физической. Разница принципиальная:</p>
+  <ul>
+    <li><strong>Физическая охрана</strong> — охранник находится на объекте постоянно. Он контролирует доступ, обходит территорию, реагирует на ситуации в реальном времени. Подходит для объектов, где нужен контроль людей и грузов.</li>
+    <li><strong>Пультовая охрана</strong> — на объекте нет охранника. Датчики и камеры следят за периметром, а оператор на пульте реагирует на тревогу, направляя ГБР. Подходит для объектов, где постоянное присутствие не требуется или нерентабельно.</li>
+  </ul>
+  <p>Часто эти два вида охраны комбинируют: днём на объекте работает охранник, а ночью объект ставится под пультовую охрану. Это снижает расходы и повышает надёжность.</p>
+
+  <blockquote>«Правильный выбор — не "или-или", а комбинация. Днём охранник контролирует посетителей, ночью пультовая охрана держит периметр. Так вы получаете максимальную защиту за разумные деньги».</blockquote>
+
+  <h2>Какие объекты нуждаются <em>в пультовой охране</em></h2>
+  <p>Пультовая охрана эффективна для широкого круга объектов:</p>
+  <ul>
+    <li><strong>Квартиры и частные дома</strong> — защита от проникновения, пожарная сигнализация, тревожная кнопка.</li>
+    <li><strong>Магазины и торговые точки</strong> — контроль проникновения в нерабочее время, защита от краж.</li>
+    <li><strong>Офисы и склады</strong> — охрана периметра, контроль доступа, защита материальных ценностей.</li>
+    <li><strong>Производственные помещения</strong> — круглосуточный мониторинг, пожарная безопасность, контроль техники.</li>
+    <li><strong>Банки и финансовые учреждения</strong> — тревожные кнопки, защита сейфовых зон, интеграция с СКУД.</li>
+    <li><strong>Школы, детские сады, больницы</strong> — контроль доступа, пожарная сигнализация, экстренный вызов.</li>
+    <li><strong>Строящиеся объекты</strong> — защита от хищения стройматериалов и вандализма в отсутствие рабочих.</li>
+  </ul>
+
+  <h2>Как устроена система <em>пультовой охраны</em></h2>
+  <p>Система пультовой охраны состоит из четырёх ключевых элементов:</p>
+
+  <h3>1. Датчики и сенсоры</h3>
+  <p>Устанавливаются на объекте и фиксируют различные угрозы:</p>
+  <ul>
+    <li><strong>Датчики движения</strong> — инфракрасные, микроволновые, комбинированные. Реагируют на перемещение в помещении.</li>
+    <li><strong>Датчики разбития</strong> — акустические сенсоры, реагирующие на звук бьющегося стекла.</li>
+    <li><strong>Датчики открытия</strong> — магнитоконтактные, устанавливаются на двери и окна.</li>
+    <li><strong>Тревожные кнопки</strong> — носимые и стационарные, для экстренного вызова ГБР.</li>
+    <li><strong>Пожарные датчики</strong> — дымовые, тепловые, реагирующие на возгорание.</li>
+    <li><strong>Датчики утечки воды и газа</strong> — для квартир и производственных помещений.</li>
+  </ul>
+
+  <h3>2. Контрольная панель</h3>
+  <p>Это «мозг» системы — приёмно-контрольный прибор, который собирает сигналы от всех датчиков, обрабатывает их и передаёт на пульт мониторинга. Панель работает от электросети, но имеет резервный аккумулятор на случай отключения электричества.</p>
+
+  <h3>3. Пульт мониторинга</h3>
+  <p>Централизованный пульт круглосуточного наблюдения, где операторы принимают и обрабатывают тревожные сигналы. При поступлении сигнала оператор оценивает ситуацию, связывается с объектом (если возможно) и направляет ГБР.</p>
+
+  <h3>4. Группа быстрого реагирования (ГБР)</h3>
+  <p>Вооружённые экипажи, патрулирующие район и готовые выехать на объект по сигналу тревоги. ГБР прибывает на объект, проводит осмотр, при необходимости задерживает нарушителей и вызывает полицию.</p>
+
+  <blockquote>«Цепочка "датчик → пульт → ГБР" срабатывает за минуты. От момента проникновения до прибытия вооружённой группы проходит в среднем 5–7 минут — быстрее, чем нарушитель успеет найти и вынести ценности».</blockquote>
+
+  <h2>Этапы подключения <em>объекта</em></h2>
+  <p>Подключение занимает от одного до нескольких дней и проходит в несколько шагов:</p>
+  <ol>
+    <li><strong>Обследование объекта.</strong> Специалист выезжает на объект, оценивает планировку, количество окон и дверей, определяет зоны риска и подбирает оптимальный набор датчиков.</li>
+    <li><strong>Проектирование системы.</strong> Составляется схема расстановки датчиков, контрольной панели, определяется канал связи (радиоканал, GSM, проводная линия).</li>
+    <li><strong>Монтаж оборудования.</strong> Установка датчиков, прокладка кабелей, настройка контрольной панели. Для небольших объектов — от 2 до 6 часов.</li>
+    <li><strong>Программирование и тестирование.</strong> Настройка сценариев реагирования, проверка связи с пультом, тестовый запуск тревоги.</li>
+    <li><strong>Подключение к пульту.</strong> Объект ставится на круглосуточный мониторинг, заключается договор на реагирование.</li>
+    <li><strong>Инструктаж клиента.</strong> Обучение пользованию системой — постановка и снятие с охраны, использование тревожной кнопки.</li>
+  </ol>
+
+  <h2>Время реагирования — <em>главный показатель</em></h2>
+  <p>Главный критерий качества пультовой охраны — время от момента срабатывания датчика до прибытия ГБР на объект. От этого зависит, успеет ли группа предотвратить ущерб.</p>
+  <p>Факторы, влияющие на время реагирования:</p>
+  <ul>
+    <li><strong>Расположение экипажей ГБР</strong> — чем ближе патруль к объекту, тем быстрее приезд.</li>
+    <li><strong>Канал связи</strong> — радиоканал и GSM передают сигнал за секунды; проводная линия может иметь задержку.</li>
+    <li><strong>Загруженность дорог</strong> — в часы пик время в пути увеличивается.</li>
+    <li><strong>Количество экипажей в районе</strong> — чем больше патрулей, тем выше вероятность, что ближайший свободен.</li>
+  </ul>
+  <p>Нормативное время реагирования для Москвы и Подмосковья — от 5 до 15 минут в зависимости от района. В центре города — быстрее, на удалённых территориях — дольше.</p>
+
+  <blockquote>«При выборе оператора всегда спрашивайте: "Сколько экипажей у вас в моём районе и каково среднее время реагирования?" Если оператор не может ответить — это тревожный сигнал».</blockquote>
+
+  <h2>Сколько стоит <em>пультовая охрана</em></h2>
+  <p>Стоимость складывается из двух частей: разовые затраты на оборудование и монтаж + ежемесячная абонентская плата за мониторинг и реагирование. Ориентировочные расценки (Москва и МО, 2026 год):</p>
+
+  <div class="price-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Услуга</th>
+          <th>Стоимость</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Обследование объекта и проектирование</td><td>бесплатно</td></tr>
+        <tr><td>Комплект оборудования (квартира, до 5 датчиков)</td><td>от 8 000 &#8381;</td></tr>
+        <tr><td>Комплект оборудования (офис, склад, до 15 датчиков)</td><td>от 18 000 &#8381;</td></tr>
+        <tr><td>Монтаж и настройка системы</td><td>от 4 000 &#8381;</td></tr>
+        <tr><td>Абонентская плата — квартира / частный дом</td><td>от 2 500 &#8381;/мес</td></tr>
+        <tr><td>Абонентская плата — офис / магазин</td><td>от 4 500 &#8381;/мес</td></tr>
+        <tr><td>Абонентская плата — склад / производство</td><td>от 7 000 &#8381;/мес</td></tr>
+        <tr><td>Выезд ГБР (включён в абонентскую плату)</td><td>0 &#8381;</td></tr>
+        <tr><td>Ложный выезд ГБР (по вине клиента)</td><td>от 1 500 &#8381;</td></tr>
+        <tr><td>Пакет «Квартира» (оборудование + монтаж + 3 мес мониторинга)</td><td>от 15 000 &#8381;</td></tr>
+        <tr><td>Пакет «Бизнес» (оборудование + монтаж + 3 мес мониторинга)</td><td>от 32 000 &#8381;</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="table-note">* Цены ориентировочные и зависят от площади объекта, количества датчиков и канала связи. Точная стоимость определяется после обследования.</p>
+
+  <h2>Как выбрать оператора: <em>чек-лист</em></h2>
+  <div class="checklist">
+    <ul>
+      <li><strong>Лицензия Росгвардии.</strong> Оператор обязан иметь действующую лицензию на оказание охранных услуг, включая пультовую охрану.</li>
+      <li><strong>Собственный пульт мониторинга.</strong> Не посредник, а прямой оператор с круглосуточным пультом и штатными операторами.</li>
+      <li><strong>Собственные экипажи ГБР.</strong> Не «подряд на подряде», а вооружённые группы в вашем районе.</li>
+      <li><strong>Время реагирования.</strong> Заранее оговорено в договоре — не обещания, а обязательства.</li>
+      <li><strong>Материальная ответственность.</strong> В договоре прописана ответственность оператора за ущерб в случае неисполнения обязательств.</li>
+      <li><strong>Техническая база.</strong> Оператор использует сертифицированное оборудование, предлагает разные каналы связи (радиоканал, GSM).</li>
+      <li><strong>Прозрачное ценообразование.</strong> Все расходы — оборудование, монтаж, абонентская плата, выезды ГБР — прописаны в договоре без скрытых платежей.</li>
+      <li><strong>Отзывы и рекомендации.</strong> Попросите контакты 2–3 действующих клиентов в вашем районе.</li>
+    </ul>
+  </div>
+
+  <blockquote>«Красный флаг: оператор предлагает абонентскую плату значительно ниже рынка. Это значит — либо мало экипажей, либо пульт перегружен, либо реагирование будет медленным. В охране дёшево — значит опасно».</blockquote>
+
+  <h2>Преимущества <em>пультовой охраны</em></h2>
+  <div class="advantages">
+    <div class="adv-card"><h3>Круглосуточный контроль</h3><p>Объект под охраной 24/7 — без перерывов, выходных и человеческого фактора.</p></div>
+    <div class="adv-card"><h3>Быстрое реагирование</h3><p>ГБР приезжает за минуты — быстрее, чем нарушитель успеет нанести ущерб.</p></div>
+    <div class="adv-card"><h3>Экономия</h3><p>Дешевле постоянного охранника — вы платите за мониторинг, а не за присутствие.</p></div>
+    <div class="adv-card"><h3>Пожарная безопасность</h3><p>Пожарные датчики передают сигнал на пульт — вызов пожарных происходит автоматически.</p></div>
+    <div class="adv-card"><h3>Дистанционное управление</h3><p>Постановка и снятие с охраны через мобильное приложение или брелок.</p></div>
+    <div class="adv-card"><h3>Материальная ответственность</h3><p>Оператор несёт ответственность по договору — в отличие от автономной сигнализации.</p></div>
+  </div>
+
+  <h2>Почему «Рускорпорация» — <em>ваш надёжный партнёр</em></h2>
+  <p>Мы обеспечиваем пультовую охрану объектов любой сложности — от квартир до производственных комплексов:</p>
+  <ul>
+    <li><strong>Собственный пульт мониторинга</strong> — круглосуточный приём и обработка тревожных сигналов штатными операторами.</li>
+    <li><strong>Собственные экипажи ГБР</strong> — вооружённые группы патрулируют Москву и Подмосковье, среднее время реагирования — 5–10 минут.</li>
+    <li><strong>Сертифицированное оборудование</strong> — используем датчики и контрольные панели от проверенных производителей с гарантией.</li>
+    <li><strong>Бесплатное обследование</strong> — выезжаем на объект, проектируем систему и составляем смету без оплаты.</li>
+    <li><strong>Материальная ответственность</strong> — прописываем в договоре ответственность за сохранность вашего имущества.</li>
+    <li><strong>Гибкие тарифы</strong> — подбираем пакет под ваш объект и бюджет, без скрытых платежей.</li>
+  </ul>
+
+  <blockquote>«Мы гарантируем, что ваш объект под надёжным контролем — днём и ночью. А если что-то пойдёт не так — мы рядом и мы отвечаем».</blockquote>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Нужна <em>пультовая охрана?</em></h2>
+    <p>Оставьте заявку, и мы бесплатно проведём обследование объекта, спроектируем систему и рассчитаем стоимость.</p>
+    <form class="cta-form" id="ctaForm" action="https://formspree.io/f/mvkpbvnb" method="POST">
+      <input type="hidden" name="_subject" value="Заявка со статьи «Пультовая охрана»">
+      <input type="text" name="name" placeholder="Имя" aria-label="Имя" required>
+      <input type="tel" name="phone" placeholder="Телефон" aria-label="Телефон" required>
+      <button type="submit" class="btn-submit">Отправить заявку</button>
+    </form>
+    <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+  </div>
+
+  <div class="cta-section" style="text-align:left">
+    <h2 style="font-size:1.5rem">Готовите объект к охране?</h2>
+    <p>Получите бесплатную консультацию и расчёт уже сегодня. Работаем по всей Москве и МО.</p>
+    <div class="cta-contacts">
+      <a href="tel:+79250474225">+7 (925) 047-42-25</a>
+      <a href="https://t.me/Almaz77777" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://wa.me/79771340739" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="/kontakty/">Контакты</a>
+    </div>
+  </div>
+
+  <p class="back-link"><a href="/stati/">&#8592; Все статьи</a></p>
+
+</article>
+
+<!-- ФУТЕР -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo-block" href="/">
+          <span class="logo-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4Z"/></svg></span>
+          <span><span class="logo-name">Рускорпорация</span><span class="logo-tag">охрана и консалтинг</span></span>
+        </a>
+        <p>Лицензированное частное охранное предприятие. Профессиональная охрана объектов и физических лиц с 2018 года.</p>
+        <div class="footer-247">● Круглосуточно, без выходных</div>
+      </div>
+      <div class="footer-col">
+        <h4>Услуги</h4>
+        <a href="/fizicheskaya-ohrana/">Физическая охрана</a>
+        <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+        <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+        <a href="/ohrana-pult/">Пультовая охрана</a>
+      </div>
+      <div class="footer-col">
+        <h4>Информация</h4>
+        <a href="/dogovor/">Договор охраны</a>
+        <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+        <a href="/kontakty/">Контакты</a>
+        <a href="/stati/">Статьи</a>
+      </div>
+      <div class="footer-col">
+        <h4>Связаться</h4>
+        <a href="tel:+79250474225">+7 (925) 047-42-25</a>
+        <a href="mailto:fizohrana@ruscor24.ru">fizohrana@ruscor24.ru</a>
+        <a href="https://t.me/Almaz77777" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://wa.me/79771340739" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-requisites">
+      <div class="req-block">
+        <h5>Реквизиты</h5>
+        <p>ООО ЧОП «Рускорпорация»<br>ИНН: 5902050810 · КПП: 590501001<br>ОГРН: 1185958064665</p>
+      </div>
+      <div class="req-block">
+        <h5>Лицензия</h5>
+        <p>№ Л056-00106-59/00033018<br>от 29.11.2018 г.<br>Выдана: УР по Пермскому краю</p>
+      </div>
+      <div class="req-block">
+        <h5>География работы</h5>
+        <p>Москва и Московская область<br>Пермь, Пермский край<br>Сочи, Краснодарский край<br>Санкт-Петербург</p>
+      </div>
+    </div>
+
+    <div class="footer-copy">&#169; 2018–2026 ООО ЧОП «Рускорпорация охрана и консалтинг» — охрана объектов и физических лиц. Все права защищены.</div>
+  </div>
+</footer>
+
+<!-- КОНСУЛЬТАНТ -->
+<div class="consultant">
+  <h4>Остались вопросы?</h4>
+  <p>Получите бесплатную консультацию за 2 минуты. Мы на связи!</p>
+  <div class="consultant-links">
+    <a href="https://wa.me/79771340739" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://t.me/Almaz77777" target="_blank" rel="noopener">Telegram</a>
+  </div>
+</div>
+
+<script>
+/* Форма статьи -> Formspree (AJAX + fallback) */
+(function(){
+  var form = document.getElementById('ctaForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('.btn-submit');
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    fetch(form.action, {method:'POST', body:new FormData(form), headers:{'Accept':'application/json'}})
+      .then(function(res){
+        if(res.ok){
+          form.innerHTML = '<p class="form-ok">&#10003; Заявка отправлена. Перезвоним в течение 15 минут.</p>';
+          return;
+        }
+        btn.disabled = false; btn.textContent = 'Отправить заявку';
+        HTMLFormElement.prototype.submit.call(form);
+      })
+      .catch(function(){ HTMLFormElement.prototype.submit.call(form); });
+  });
+})();
+</script>
+
+<!-- Микроразметка статьи. Не забудьте поставить реальную дату публикации -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Пультовая охрана: как это работает и кому нужна",
+  "description": "Как устроена пультовая охрана: датчики, пульт мониторинга, ГБР. Чем отличается от физической охраны, сколько стоит и как выбрать оператора.",
+  "author": {
+    "@type": "Person",
+    "name": "Пётр Жгун",
+    "jobTitle": "Заместитель директора по физической охране",
+    "worksFor": {"@type": "Organization", "name": "ЧОО «Рускорпорация»"}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ЧОО «Рускорпорация»",
+    "url": "https://ohrana.tech"
+  },
+  "mainEntityOfPage": "https://ohrana.tech/stati/pultovaya-ohrana.html",
+  "datePublished": "2026-01-15"
+}
+</script>
+
+</body>
+</html>
