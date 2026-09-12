@@ -1,0 +1,74 @@
+# robots.txt for ohrana.tech
+# Allow indexing of useful content, block administrative and system files
+
+User-agent: *
+Crawl-delay: 2
+
+# ===== ALLOWED SECTIONS (all useful content) =====
+Allow: /
+Allow: /fizicheskaya-ohrana/
+Allow: /ohrana-fizicheskih-lic/
+Allow: /ohrana-yuridicheskih-lic/
+Allow: /ohrana-pult/
+Allow: /ohrana-moskovskaya-oblast/
+Allow: /dogovor/
+Allow: /kontakty/
+Allow: /stati/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /android-chrome-*.png
+Allow: /apple-touch-icon*.png
+Allow: /favicon-*.png
+
+# ===== DISALLOWED SYSTEM AND ADMIN FOLDERS =====
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /backups/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /vendor/
+Disallow: /node_modules/
+Disallow: /system/
+Disallow: /api/
+Disallow: /ajax/
+Disallow: /assets/
+Disallow: /storage/
+Disallow: /cache/
+Disallow: /temp/
+Disallow: /tests/
+Disallow: /src/
+Disallow: /public/
+Disallow: /resources/
+Disallow: /database/
+Disallow: /migrations/
+Disallow: /bootstrap/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /.idea/
+Disallow: /.vscode/
+Disallow: /.htaccess
+Disallow: /.htpasswd
+Disallow: /composer.json
+Disallow: /composer.lock
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /web.config
+Disallow: /error_log
+Disallow: /php.ini
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /wp-config.php
+
+# ===== SITEMAP LOCATION =====
+Sitemap: https://ohrana.tech/sitemap.xml

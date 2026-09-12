@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ====== ФАВИКОНКИ (КРАСНАЯ СФЕРА) ====== -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#050d1a">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111882478', 'ym');
+      ym(111882478, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/111882478" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <title>Охрана квартир в Москве — ЧОП Рускорпорация | Пультовая охрана, датчики</title>
+  <meta name="description" content="Профессиональная охрана квартир в Москве и МО. Пультовая охрана, современные датчики, тревожная кнопка. Время реагирования ГБР 5-15 минут. Лицензия Росгвардии.">
+  <link rel="canonical" href="https://ohrana.tech/ohrana-kvartir/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Охрана квартир",
+    "provider": { "@type": "LocalBusiness", "name": "ООО ЧОП Рускорпорация" },
+    "areaServed": [
+      { "@type": "City", "name": "Москва" },
+      { "@type": "State", "name": "Московская область" }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== ГЛОБАЛЬНЫЕ СТИЛИ ===== */
+    :root {
+      --navy: #050d1a;
+      --navy-light: #0a1628;
+      --navy-lighter: #112240;
+      --red: #c41e3a;
+      --red-bright: #e62e4d;
+      --red-dark: #8a1529;
+      --red-glow: rgba(196, 30, 58, 0.25);
+      --white: #ffffff;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --text: #0f172a;
+      --text-light: #e2e8f0;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-glow: 0 0 40px rgba(196, 30, 58, 0.15);
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    /* === КАСТОМНЫЙ КУРСОР === */
+    .cursor-dot, .cursor-outline {
+      position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+      border-radius: 50%; z-index: 10000; pointer-events: none;
+    }
+    .cursor-dot { width: 8px; height: 8px; background: var(--red); }
+    .cursor-outline {
+      width: 40px; height: 40px; border: 1.5px solid rgba(196, 30, 58, 0.5);
+      transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    }
+    body:hover .cursor-outline.hovered {
+      width: 60px; height: 60px; background: rgba(196, 30, 58, 0.1); border-color: var(--red);
+    }
+    @media (hover: none) {
+      body { cursor: auto; }
+      .cursor-dot, .cursor-outline { display: none !important; }
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; cursor: none; }
+    button, input { cursor: none; }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    /* === АНИМАЦИИ === */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      filter: blur(5px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); filter: blur(0); }
+
+    /* ========================================================= */
+    /* === ШАПКА (GLASSMORPHISM) === */
+    .header {
+      background: rgba(5, 13, 26, 0.85);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      padding: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: var(--transition);
+    }
+    .header-scrolled { background: rgba(5, 13, 26, 0.98); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 16px 0; }
+    .logo {
+      color: var(--white); font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; line-height: 1.1;
+      position: relative; z-index: 2;
+    }
+    .logo span { color: var(--red); }
+
+    .header-actions { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+    .header-phone { color: var(--white); font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 8px; transition: var(--transition); white-space: nowrap; }
+    .header-phone:hover { color: var(--red-bright); }
+    .header-phone i { color: var(--red); font-size: 0.9rem; }
+
+    .header-cta {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: var(--white); padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 0.9rem;
+      transition: var(--transition); white-space: nowrap; box-shadow: 0 4px 20px rgba(196,30,58,0.4);
+      position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);
+    }
+    .header-cta::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s; }
+    .header-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(196,30,58,0.6); }
+    .header-cta:hover::before { left: 100%; }
+
+    .nav { background: rgba(10, 22, 40, 0.5); border-top: 1px solid rgba(255,255,255,0.03); }
+    .nav-list { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 8px 0; }
+    .nav-list a {
+      color: var(--gray-300); padding: 8px 16px; font-size: 0.85rem; font-weight: 500;
+      border-radius: 100px; transition: var(--transition); position: relative; white-space: nowrap;
+    }
+    .nav-list a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+    .nav-list a.active { color: var(--white); background: rgba(196,30,58,0.2); font-weight: 600; border: 1px solid rgba(196,30,58,0.4); }
+
+    /* === ХЛЕБНЫЕ КРОШКИ === */
+    .breadcrumbs {
+      background: var(--gray-50);
+      padding: 100px 0 12px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .breadcrumbs ol {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+    }
+    .breadcrumbs li { font-size: 0.85rem; color: var(--gray-500); }
+    .breadcrumbs li:not(:last-child)::after { content: "›"; margin-left: 10px; color: var(--gray-400); }
+    .breadcrumbs a { color: var(--gray-500); transition: color 0.2s; }
+    .breadcrumbs a:hover { color: var(--red); }
+
+    /* === HERO СЕКЦИЯ === */
+    .hero {
+      background: var(--navy);
+      padding: 40px 0 80px;
+      position: relative;
+      overflow: hidden;
+      min-height: auto;
+      display: flex;
+      align-items: center;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(-45deg, #050d1a, #0f1f38, #1a0510, #0a1628);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      pointer-events: none;
+    }
+    .hero-bg::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(196,30,58,0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 20% 80%, rgba(196,30,58,0.1) 0%, transparent 40%);
+    }
+
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(196,30,58,0.15); border: 1px solid rgba(196,30,58,0.3);
+      color: #ff8a95; padding: 8px 16px;
+      border-radius: 100px; font-size: 0.75rem; font-weight: 600;
+      margin-bottom: 16px;
+      animation: fadeInUp 0.8s ease-out both;
+      backdrop-filter: blur(10px);
+    }
+    .hero-badge i { font-size: 0.7rem; color: var(--red-bright); }
+
+    .hero h1 {
+      color: var(--white); font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+      animation: fadeInUp 0.8s 0.1s ease-out both;
+    }
+    .hero h1 .accent {
+      color: transparent;
+      background: linear-gradient(135deg, var(--red-bright) 0%, #ff6b7a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      position: relative;
+      display: inline-block;
+    }
+    .hero-desc {
+      color: var(--gray-300);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s 0.2s ease-out both;
+      max-width: 560px;
+      font-weight: 400;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      animation: fadeInUp 0.8s 0.25s ease-out both;
+    }
+    .hero-badge-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 4px 12px;
+      border-radius: 100px;
+      color: var(--gray-300);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    .hero-badge-item i { color: var(--red-bright); font-size: 0.7rem; }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+      animation: fadeInUp 0.8s 0.4s ease-out both;
+    }
+    .hero-buttons .btn-lg { padding: 12px 22px; font-size: 0.85rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 100px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 1px solid transparent;
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-accent {
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: var(--white) !important;
+      box-shadow: 0 4px 20px rgba(196,30,58,0.4);
+    }
+    .btn-accent:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(196,30,58,0.5); }
+    .btn-tg { background: rgba(34,158,217,0.15); color: #229ED9; border-color: rgba(34,158,217,0.3); backdrop-filter: blur(10px); }
+    .btn-tg:hover { background: #229ED9; color: var(--white); transform: translateY(-3px); }
+    .btn-wa { background: rgba(37,211,102,0.15); color: #25D366; border-color: rgba(37,211,102,0.3); backdrop-filter: blur(10px); }
+    .btn-wa:hover { background: #25D366; color: var(--white); transform: translateY(-3px); }
+
+    .hero-image-wrap {
+      position: relative;
+      animation: fadeIn 1.2s 0.3s ease-out both;
+      perspective: 1000px;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+      display: block;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-image-wrap:hover img { transform: rotateY(-3deg) rotateX(2deg) scale(1.02); }
+    .hero-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      border-radius: calc(var(--radius-lg) + 20px);
+      background: linear-gradient(135deg, rgba(196,30,58,0.2), rgba(10,22,40,0.4));
+      z-index: 0;
+      filter: blur(40px);
+      opacity: 0.7;
+    }
+    .hero-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,0.1);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* === СЕКЦИИ === */
+    .section { padding: 60px 0; position: relative; }
+    .section-alt { background: var(--gray-50); }
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+      letter-spacing: -1px;
+    }
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* === СЕТКА УСЛУГ === */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      border-left: 4px solid var(--red);
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: transparent;
+    }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .service-card h3 i { color: var(--red); font-size: 1.2rem; }
+    .service-card p { color: var(--gray-500); font-size: 0.92rem; line-height: 1.6; margin: 0; }
+
+    /* === БЛОК С ИЗОБРАЖЕНИЕМ === */
+    .image-block {
+      margin: 40px 0;
+      text-align: center;
+    }
+    .image-block img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: inline-block;
+    }
+    .image-caption {
+      margin-top: 12px;
+      color: var(--gray-500);
+      font-size: 0.9rem;
+    }
+
+    /* === ТАБЛИЦА === */
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .price-table thead { background: var(--navy); }
+    .price-table th {
+      color: var(--white);
+      padding: 14px 18px;
+      text-align: left;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .price-table th:last-child { text-align: right; }
+    .price-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--gray-200);
+      font-size: 0.92rem;
+      color: var(--gray-600);
+    }
+    .price-table td:last-child { text-align: right; font-weight: 700; color: var(--red); white-space: nowrap; }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table tr:hover td { background: var(--gray-50); }
+    .price-note { font-size: 0.85rem; color: var(--gray-500); font-style: italic; margin-top: 8px; }
+
+    /* === ЭТАПЫ === */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .step-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+    }
+    .step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--red);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .step-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .step-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.5; margin: 0; }
+
+    /* === ПРЕИМУЩЕСТВА (4 карточки) === */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      perspective: 1000px;
+      margin-top: 32px;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 20px;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), #ff6b7a);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px) rotateX(2deg);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .feature-card:hover::before { transform: scaleX(1); }
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(196,30,58,0.1) 0%, rgba(196,30,58,0.05) 100%);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      font-size: 1.5rem;
+      color: var(--red);
+      transition: var(--transition);
+    }
+    .feature-card:hover .feature-icon {
+      background: var(--red);
+      color: var(--white);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 10px 30px rgba(196,30,58,0.3);
+    }
+    .feature-card h3 { font-size: 0.95rem; margin-bottom: 6px; color: var(--navy); font-weight: 800; }
+    .feature-card p { font-size: 0.85rem; color: var(--gray-500); line-height: 1.5; }
+
+    /* === FAQ === */
+    .faq-item {
+      background: var(--white);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-sm); }
+    .faq-item summary {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy);
+      padding: 16px 20px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      background: var(--white);
+    }
+    .faq-item summary:hover { background: var(--gray-50); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "\f067";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 0.75rem;
+      color: var(--red);
+      width: 28px;
+      height: 28px;
+      background: rgba(196,30,58,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item[open] summary::after {
+      content: "\f068";
+      background: var(--red);
+      color: var(--white);
+      transform: rotate(180deg);
+    }
+    .faq-item[open] summary { background: var(--gray-50); }
+    .faq-answer {
+      padding: 0 20px 20px;
+      color: var(--gray-600);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+    .faq-answer p { margin-bottom: 8px; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+
+    /* === CTA БЛОК === */
+    .cta-block {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-lighter) 100%);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+      color: var(--white);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+    .cta-block::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(196,30,58,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .cta-block .cta-title { font-size: 1.4rem; font-weight: 800; color: var(--white); margin-bottom: 8px; position: relative; z-index: 1; }
+    .cta-block p { color: var(--gray-300); line-height: 1.6; margin-bottom: 6px; position: relative; z-index: 1; }
+    .cta-block .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--red-bright);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-block .cta-link:hover { border-bottom-color: var(--red-bright); }
+
+    /* === ФУТЕР === */
+    .footer {
+      background: var(--navy);
+      color: var(--gray-400);
+      padding: 60px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 32px;
+      padding: 10px 0 32px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .footer h4 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--white);
+    }
+    .footer a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      color: var(--gray-400);
+      transition: var(--transition);
+      white-space: nowrap;
+      width: 100%;
+    }
+    .footer a i {
+      width: 18px;
+      text-align: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      color: var(--red);
+      transition: var(--transition);
+    }
+    .footer a:hover { color: var(--white); transform: translateX(4px); }
+    .footer a:hover i { color: var(--red-bright); }
+
+    .footer-legal {
+      padding: 28px 0;
+      background: #020610;
+    }
+    .footer-legal-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .footer-legal-block {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      line-height: 1.7;
+    }
+    .footer-legal-block strong {
+      color: var(--white);
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .footer-copyright {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* === ПЛАВАЮЩИЕ КНОПКИ === */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+    .floating-buttons a {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      text-decoration: none;
+    }
+    .floating-buttons a:hover { transform: scale(1.1) translateY(-2px); }
+    .floating-buttons .phone-float { background: linear-gradient(135deg, var(--red), var(--red-dark)); }
+    .floating-buttons .tg-float { background: #229ED9; }
+    .floating-buttons .wa-float { background: #25D366; }
+
+    /* ========================================================= */
+    /* === МОБИЛЬНАЯ АДАПТАЦИЯ === */
+    /* ========================================================= */
+    @media (max-width: 1100px) {
+      .hero h1 { font-size: 2.6rem; }
+      .features-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 992px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-image-wrap { max-width: 500px; margin: 0 auto; order: -1; }
+      .hero-desc { margin: 0 auto 20px; }
+      .hero-badges { justify-content: center; }
+      .hero-buttons { justify-content: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .header-inner { padding: 12px 0; gap: 12px; }
+      .logo { font-size: 1.1rem; }
+      .header-actions { gap: 10px; margin-left: auto; }
+      .header-phone span { display: none; }
+      .header-phone i { font-size: 1.4rem; margin: 0; }
+      .header-cta { padding: 10px 16px; font-size: 0.8rem; border-radius: 8px; }
+
+      .nav-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 10px 0; }
+      .nav-list a { text-align: center; padding: 10px 4px; font-size: 0.75rem; border-radius: 8px; }
+      .nav-list a.active::after { display: none; }
+
+      .breadcrumbs { padding: 90px 0 8px; }
+
+      /* ===== МОБИЛЬНЫЙ ОТСТУП: 100px 0 50px ===== */
+      .hero { padding: 100px 0 50px; }
+      .hero h1 { font-size: 1.8rem; letter-spacing: -1px; }
+      .hero-desc { font-size: 0.95rem; }
+      .hero-buttons .btn-lg { padding: 10px 16px; font-size: 0.75rem; }
+
+      .hero-image-wrap img {
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-md);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      }
+
+      .section { padding: 40px 0; }
+      .section-header h2 { font-size: 1.6rem; }
+      .section-header p { font-size: 0.92rem; }
+
+      .services-grid { gap: 14px; }
+      .service-card { padding: 18px 20px; }
+      .service-card h3 { font-size: 1rem; }
+
+      .price-table { font-size: 0.82rem; }
+      .price-table th { padding: 10px 12px; font-size: 0.7rem; }
+      .price-table td { padding: 10px 12px; }
+
+      .steps-grid { grid-template-columns: 1fr; gap: 14px; }
+
+      .features-grid { grid-template-columns: 1fr; gap: 14px; }
+      .feature-card { padding: 24px 16px; }
+      .feature-icon { width: 52px; height: 52px; font-size: 1.3rem; }
+
+      .cta-block { padding: 24px 20px; }
+      .cta-block .cta-title { font-size: 1.2rem; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+      .footer a { justify-content: center; }
+      .footer-legal-inner { grid-template-columns: 1fr; gap: 18px; text-align: center; }
+
+      .floating-buttons { bottom: 16px; right: 12px; }
+      .floating-buttons a { width: 44px; height: 44px; font-size: 1.1rem; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 90px 0 40px; }
+      .hero h1 { font-size: 1.5rem; }
+      .hero-buttons .btn-lg { padding: 8px 14px; font-size: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- КАСТОМНЫЙ КУРСОР -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-outline" id="cursor-outline"></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo hover-target">РУСКОРПОРАЦИЯ <span>охрана и консалтинг</span></a>
+        <div class="header-actions">
+          <a href="tel:+79250474225" class="header-phone hover-target">
+            <i class="fas fa-phone"></i> <span>+7 (925) 047-42-25</span>
+          </a>
+          <a href="/kontakty/" class="header-cta hover-target">Заказать охрану</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Главное меню">
+      <div class="container">
+        <div class="nav-list">
+          <a href="/" class="hover-target">Главная</a>
+          <a href="/dogovor/" class="hover-target">Договор</a>
+          <a href="/fizicheskaya-ohrana/" class="hover-target">Физ. охрана</a>
+          <a href="/ohrana-fizicheskih-lic/" class="hover-target">Охрана физ лиц</a>
+          <a href="/ohrana-yuridicheskih-lic/" class="hover-target">Для юрлиц</a>
+          <a href="/ohrana-pult/" class="hover-target">Пультовая охрана</a>
+          <a href="/ohrana-moskovskaya-oblast/" class="hover-target">Регионы</a>
+          <a href="/stati/" class="hover-target">Статьи</a>
+          <a href="/kontakty/" class="hover-target">Контакты</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ХЛЕБНЫЕ КРОШКИ -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="/">Главная</a></li>
+        <li><a href="/fizicheskaya-ohrana/">Физическая охрана</a></li>
+        <li>Охрана квартир</li>
+      </ol>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO СЕКЦИЯ -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <i class="fas fa-shield-alt"></i> Лицензия Росгвардии
+            </div>
+            <h1>Охрана <span class="accent">квартир</span> в Москве</h1>
+            <p class="hero-desc">Пультовая охрана квартир с современными датчиками и тревожной кнопкой. Время реагирования группы быстрого реагирования — от 5 до 15 минут. Круглосуточный мониторинг.</p>
+            <div class="hero-badges">
+              <span class="hero-badge-item"><i class="fas fa-shield-halved"></i> Лицензия Росгвардии</span>
+              <span class="hero-badge-item"><i class="fas fa-clock"></i> Реагирование 5-15 мин</span>
+              <span class="hero-badge-item"><i class="fas fa-bell"></i> Тревожная кнопка</span>
+            </div>
+            <div class="hero-buttons">
+              <a href="tel:+79250474225" class="btn btn-accent btn-lg hover-target">
+                <i class="fas fa-phone"></i> Позвонить
+              </a>
+              <a href="https://t.me/Almaz77777" target="_blank" rel="noopener" class="btn btn-tg btn-lg hover-target">
+                <i class="fab fa-telegram-plane"></i> Telegram
+              </a>
+              <a href="https://wa.me/79771340739" target="_blank" rel="noopener" class="btn btn-wa btn-lg hover-target">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+          <div class="hero-image-wrap hover-target">
+            <img src="/images/oborudovanie-kvartira.jpg" alt="Современное оборудование для охраны квартиры" loading="eager" width="400" height="500">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПУЛЬТОВАЯ ОХРАНА -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Пультовая охрана квартир</h2>
+          <p>Современная система безопасности с мгновенным оповещением пульта централизованного наблюдения и выездом группы быстрого реагирования</p>
+        </div>
+        <div class="services-grid reveal">
+          <div class="service-card hover-target">
+            <h3><i class="fas fa-bell"></i>Датчики движения</h3>
+            <p>Инфракрасные датчики фиксируют перемещение по квартире. Устанавливаются в коридорах и ключевых зонах. Ложные срабатывания исключены благодаря современным технологиям.</p>
+          </div>
+          <div class="service-card hover-target">
+            <h3><i class="fas fa-door-open"></i>Датчики открытия</h3>
+            <p>Контроль входной двери, окон, балконных дверей. При открытии срабатывает сигнал тревоги. Незаменимы для защиты от проникновения.</p>
+          </div>
+          <div class="service-card hover-target">
+            <h3><i class="fas fa-hand-paper"></i>Тревожная кнопка</h3>
+            <p>Стационарная или беспроводная кнопка экстренного вызова. Устанавливается у входа, в спальне или носится как брелок. Мгновенное оповещение пульта.</p>
+          </div>
+          <div class="service-card hover-target">
+            <h3><i class="fas fa-bolt"></i>Время реагирования</h3>
+            <p>Группа быстрого реагирования прибывает на объект в течение <strong>5-15 минут</strong> в зависимости от района Москвы. Круглосуточно, без выходных.</p>
+          </div>
+        </div>
+
+        <!-- БЛОК С ИЗОБРАЖЕНИЕМ ОБОРУДОВАНИЯ -->
+        <div class="image-block reveal">
+          <img src="/images/oborudovanie-kvartira.jpg" alt="Современное оборудование для охраны квартиры: датчики, панель управления, тревожная кнопка" loading="lazy" width="800" height="500">
+          <p class="image-caption">Комплект оборудования для пультовой охраны квартиры</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАК ЭТО РАБОТАЕТ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Как работает пультовая охрана</h2>
+          <p>От установки до выезда группы быстрого реагирования — 4 простых шага</p>
+        </div>
+        <div class="steps-grid reveal">
+          <div class="step-card hover-target">
+            <div class="step-num">1</div>
+            <h3>Установка</h3>
+            <p>Монтируем датчики, панель управления, тревожную кнопку. Настраиваем систему под планировку вашей квартиры.</p>
+          </div>
+          <div class="step-card hover-target">
+            <div class="step-num">2</div>
+            <h3>Постановка</h3>
+            <p>При уходе ставите квартиру на охрану с брелока или через мобильное приложение. Система активируется.</p>
+          </div>
+          <div class="step-card hover-target">
+            <div class="step-num">3</div>
+            <h3>Тревога</h3>
+            <p>При срабатывании датчика сигнал мгновенно поступает на пульт. Диспетчер видит адрес и зону срабатывания.</p>
+          </div>
+          <div class="step-card hover-target">
+            <div class="step-num">4</div>
+            <h3>Выезд ГБР</h3>
+            <p>Группа быстрого реагирования выезжает на объект в течение 5-15 минут. Проверяет квартиру, принимает меры.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Стоимость охраны квартиры</h2>
+          <p>Цены зависят от количества датчиков, площади квартиры и выбранного тарифа</p>
+        </div>
+        <table class="price-table reveal">
+          <thead>
+            <tr>
+              <th>Услуга</th>
+              <th>Стоимость</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Пультовая охрана (базовый пакет: 3 датчика + пульт)</td>
+              <td>от 5 500 ₽/мес</td>
+            </tr>
+            <tr>
+              <td>Расширенный пакет (5 датчиков + тревожная кнопка)</td>
+              <td>от 7 500 ₽/мес</td>
+            </tr>
+            <tr>
+              <td>Премиум (8 датчиков + видеонаблюдение)</td>
+              <td>от 12 000 ₽/мес</td>
+            </tr>
+            <tr>
+              <td>Установка оборудования (монтаж + настройка)</td>
+              <td>от 15 000 ₽</td>
+            </tr>
+            <tr>
+              <td>Дополнительный датчик</td>
+              <td>от 2 500 ₽</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="price-note reveal">Точная стоимость рассчитывается после бесплатного выезда специалиста для оценки объекта.</p>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Почему выбирают пультовую охрану</h2>
+          <p>Надёжность, скорость и доступная цена</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card reveal hover-target">
+            <div class="feature-icon"><i class="fas fa-id-card"></i></div>
+            <h3>Лицензия и разрешение</h3>
+            <p>Действующая лицензия на охранную деятельность № Л056-00106-59/00033018</p>
+          </div>
+          <div class="feature-card reveal hover-target" style="transition-delay: 0.1s;">
+            <div class="feature-icon"><i class="fas fa-clock"></i></div>
+            <h3>Круглосуточно 24/7</h3>
+            <p>Диспетчерская и группы быстрого реагирования работают без выходных</p>
+          </div>
+          <div class="feature-card reveal hover-target" style="transition-delay: 0.2s;">
+            <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Реагирование 5-15 мин</h3>
+            <p>Мгновенный выезд ГБР при любом срабатывании сигнализации</p>
+          </div>
+          <div class="feature-card reveal hover-target" style="transition-delay: 0.3s;">
+            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Управление со смартфона</h3>
+            <p>Постановка/снятие с охраны, уведомления и просмотр статуса через приложение</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Частые вопросы</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+          <details class="faq-item reveal" open>
+            <summary>Что такое время реагирования и от чего оно зависит?</summary>
+            <div class="faq-answer">
+              <p>Время реагирования — это период между получением сигнала тревоги на пульте и прибытием группы быстрого реагирования на объект. В Москве оно составляет от 5 до 15 минут и зависит от района, дорожной обстановки и загруженности экипажей.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal" style="transition-delay: 0.1s;">
+            <summary>Можно ли поставить охрану только на ночь?</summary>
+            <div class="faq-answer">
+              <p>Да, мы предлагаем гибкие тарифы. Можно активировать систему только на время вашего отсутствия или в ночные часы. Стоимость пересчитывается пропорционально времени охраны.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal" style="transition-delay: 0.2s;">
+            <summary>Что происходит при ложном срабатывании?</summary>
+            <div class="faq-answer">
+              <p>Диспетчер связывается с вами по телефону для подтверждения. Если не дозванивается — направляет группу для проверки. При частых ложных срабатываниях бесплатно корректируем настройки датчиков.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal" style="transition-delay: 0.3s;">
+            <summary>Можно ли управлять системой дистанционно?</summary>
+            <div class="faq-answer">
+              <p>Да, все современные системы интегрируются с мобильным приложением. Вы можете ставить и снимать квартиру с охраны, просматривать статус датчиков и получать уведомления на смартфон из любой точки мира.</p>
+            </div>
+          </details>
+          <details class="faq-item reveal" style="transition-delay: 0.4s;">
+            <summary>Входит ли в стоимость обслуживание оборудования?</summary>
+            <div class="faq-answer">
+              <p>Да, в абонентскую плату включено регулярное техническое обслуживание, проверка работоспособности датчиков и замена элементов питания. Выезд мастера при поломке — бесплатно.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-title">Защитите свою квартиру уже сегодня!</div>
+          <p>Бесплатный выезд специалиста, оценка объекта и расчёт стоимости в день обращения. Лицензия Росгвардии, материальная ответственность.</p>
+          <a href="/kontakty/" class="cta-link">Поставить квартиру на охрану →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПЛАВАЮЩИЕ КНОПКИ -->
+  <div class="floating-buttons">
+    <a href="https://t.me/Almaz77777" target="_blank" rel="noopener" class="tg-float" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+    <a href="https://wa.me/79771340739" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+79250474225" class="phone-float" aria-label="Позвонить"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 style="font-size: 1rem; margin-bottom: 12px;">ЧОО «РУСКОРПОРАЦИЯ охрана и консалтинг»</h4>
+          <p style="font-size:0.9rem; line-height:1.6; opacity:0.8; color: var(--gray-400);">Лицензированный ЧОО — профессиональная охрана объектов и людей с 2018 года.</p>
+        </div>
+        <div>
+          <h4>Услуги</h4>
+          <a href="/fizicheskaya-ohrana/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Физическая охрана</a>
+          <a href="/ohrana-fizicheskih-lic/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Охрана физ лиц</a>
+          <a href="/ohrana-yuridicheskih-lic/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Для юрлиц</a>
+          <a href="/ohrana-pult/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Пультовая охрана</a>
+        </div>
+        <div>
+          <h4>Информация</h4>
+          <a href="/dogovor/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Договор охраны</a>
+          <a href="/ohrana-moskovskaya-oblast/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Регионы</a>
+          <a href="/kontakty/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Контакты</a>
+          <a href="/stati/" class="hover-target"><i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i> Статьи</a>
+        </div>
+        <div>
+          <h4>Связаться</h4>
+          <a href="tel:+79250474225" class="hover-target"><i class="fas fa-phone"></i> +7 (925) 047-42-25</a>
+          <a href="mailto:fizohrana@ruscor24.ru" class="hover-target"><i class="fas fa-envelope"></i> fizohrana@ruscor24.ru</a>
+          <a href="https://t.me/Almaz77777" target="_blank" rel="noopener" class="hover-target"><i class="fab fa-telegram-plane"></i> Telegram</a>
+          <a href="https://wa.me/79771340739" target="_blank" rel="noopener" class="hover-target"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <p style="font-size:0.85rem; margin-top:14px; color:var(--gray-500);"><i class="fas fa-clock" style="margin-right: 8px;"></i>Круглосуточно, без выходных</p>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <div class="container">
+          <div class="footer-legal-inner">
+            <div class="footer-legal-block">
+              <strong>Реквизиты</strong>
+              ООО ЧОО «Рускорпорация»<br>
+              ИНН: 5902050810<br>
+              КПП: 590501001<br>
+              ОГРН: 1185958064665
+            </div>
+            <div class="footer-legal-block">
+              <strong>Лицензия</strong>
+              № Л056-00106-59/00033018<br>
+              от 29.11.2018 г.<br>
+              <span style="opacity:0.7;">Выдана: УР по Пермскому краю</span>
+            </div>
+            <div class="footer-legal-block">
+              <strong>География работы</strong>
+              Москва и Московская область<br>
+              Пермь, Пермский край<br>
+              Сочи, Краснодарский край<br>
+              Санкт-Петербург
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+          © 2018–2026 ООО ЧОО «Рускорпорация охрана и консалтинг» — охрана объектов и физических лиц. Все права защищены.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === КАСТОМНЫЙ КУРСОР ===
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorOutline = document.getElementById('cursor-outline');
+
+    window.addEventListener('mousemove', (e) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+      }, { duration: 500, fill: "forwards" });
+    });
+
+    document.querySelectorAll('.hover-target, a, button, input, .faq-item summary').forEach(el => {
+      el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
+    });
+
+    // === ЭФФЕКТ ШАПКИ ПРИ СКРОЛЛЕ ===
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+
+    // === SCROLL REVEAL ===
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // === FAQ РАСКРЫТИЕ ===
+    document.querySelectorAll('.faq-item summary').forEach(summary => {
+      summary.addEventListener('click', function(e) {
+        const details = this.closest('.faq-item');
+        const isOpen = details.hasAttribute('open');
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== details) item.removeAttribute('open');
+        });
+        if (isOpen) {
+          details.removeAttribute('open');
+        } else {
+          details.setAttribute('open', '');
+        }
+        e.preventDefault();
+      });
+    });
+  </script>
+</body>
+</html>

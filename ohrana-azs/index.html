@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/ css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 8 L88 50 L50 92 L12 50 Z' fill='%230a1628' stroke='%23c41e3a' stroke-width='3'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-family='Arial Black, sans-serif' font-weight='900' font-size='40' fill='%23fff'%3E%D0%A0%3C/text%3E%3Ccircle cx='50' cy='24' r='4' fill='%23c41e3a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Охрана АЗС в Москве — ЧОП Рускорпорация | Круглосуточный пост, видеонаблюдение</title>
+<meta name="description" content="Профессиональная охрана АЗС в Москве и МО. Круглосуточный пост, контроль терминалов, видеонаблюдение, защита от краж топлива и нападений. Лицензия Росгвардии.">
+<link rel="canonical" href="https://ohrana.tech/ohrana-azs/">
+<style>
+:root {
+  --navy: #0a1628;
+  --navy-light: #0f1f38;
+  --red: #c41e3a;
+  --red-dark: #a01830;
+  --white: #ffffff;
+  --gray-400: #8a9ab0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { scroll-behavior: smooth; overflow-x: hidden !important; max-width: 100vw !important; }
+img, picture, video, canvas, svg { max-width: 100% !important; height: auto !important; display: block; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; font-size: 16px; line-height: 1.6; color: #1a2a3a; background: var(--white); }
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* === ШАПКА === */
+.header { background: var(--navy); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; }
+.logo { color: var(--white); font-weight: 900; font-size: 1.5rem; letter-spacing: -0.5px; line-height: 1.1; }
+.header-actions { display: flex; align-items: center; gap: 20px; margin-left: auto; }
+.header-phone { color: var(--white); font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+.header-phone i { color: var(--red); font-size: 0.9rem; }
+.header-cta { background: var(--red); color: var(--white); padding: 10px 24px; border-radius: 10px; font-weight: 700; font-size: 0.9rem; white-space: nowrap; box-shadow: 0 4px 16px rgba(196,30,58,0.35); transition: all 0.3s; }
+.header-cta:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+/* === НАВИГАЦИЯ === */
+.nav { background: var(--navy); }
+.nav-list { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; padding: 6px 0; }
+.nav-list a { color: var(--white); padding: 10px 16px; font-size: 0.88rem; font-weight: 500; opacity: 0.75; border-radius: 8px; transition: all 0.3s; white-space: nowrap; position: relative; }
+.nav-list a:hover { opacity: 1; background: rgba(196,30,58,0.12); color: #ff6b7a; }
+.nav-list a.active { opacity: 1; color: var(--red); background: rgba(196,30,58,0.1); font-weight: 600; }
+.nav-list a.active::after { content: ""; position: absolute; bottom: 6px; left: 16px; right: 16px; height: 2px; background: var(--red); border-radius: 2px; }
+
+/* === HERO === */
+.hero { background: var(--navy); padding: 130px 0 60px; min-height: auto; }
+.hero .hero-flex { display: flex; align-items: center; gap: 30px; justify-content: space-between; }
+.hero .hero-text { flex: 1; max-width: 70%; }
+.hero .hero-image { flex: 0 0 25%; max-width: 25%; }
+.hero .hero-image img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); display: block; aspect-ratio: 4/3; object-fit: cover; }
+.hero h1 { color: #fff; font-size: 2.8rem; font-weight: 700; margin-bottom: 20px; }
+.hero p { color: #f0f4f8; font-size: 1.2rem; line-height: 1.6; opacity: 0.95; }
+.hero-badges { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+.hero-badge { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px solid rgba(196,30,58,0.3); padding: 8px 16px; border-radius: 8px; color: #fff; font-size: 0.85rem; font-weight: 600; }
+.hero-badge i { color: var(--red); }
+.hero-cta { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+.hero-cta a { padding: 14px 28px; border-radius: 10px; font-weight: 700; font-size: 0.95rem; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; }
+.hero-cta .btn-red { background: var(--red); color: #fff; box-shadow: 0 4px 16px rgba(196,30,58,0.35); }
+.hero-cta .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); }
+.hero-cta .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.25); }
+.hero-cta .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+
+/* === СЕКЦИИ === */
+.section { padding: 50px 0; }
+.section h2 { color: var(--navy); font-size: 1.8rem; font-weight: 800; margin-bottom: 20px; }
+.section h2.center { text-align: center; }
+.section h3 { color: var(--navy); font-size: 1.2rem; font-weight: 700; margin: 24px 0 12px; }
+.section ul { padding-left: 20px; margin-bottom: 16px; }
+.section li { margin-bottom: 10px; line-height: 1.6; color: #334155; }
+.section p { margin-bottom: 14px; color: #334155; }
+
+/* === СЕТКА УСЛУГ === */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 30px 0; }
+.service-card { background: #fff; border-radius: 12px; padding: 28px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; border-left: 4px solid var(--red); transition: all 0.3s; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-left-color: var(--navy); }
+.service-card h3 { color: var(--navy); font-size: 1.15rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+.service-card h3 i { color: var(--red); font-size: 1.4rem; }
+.service-card p { color: #64748b; line-height: 1.6; font-size: 0.92rem; margin: 0; }
+
+/* === ТАБЛИЦА ЦЕН === */
+.price-table { width: 100%; border-collapse: collapse; margin: 24px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.price-table thead { background: var(--navy); }
+.price-table th { color: #fff; padding: 16px 20px; text-align: left; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.price-table th:last-child { text-align: right; }
+.price-table td { padding: 14px 20px; border-bottom: 1px solid #e2e8f0; font-size: 0.92rem; color: #334155; }
+.price-table td:last-child { text-align: right; font-weight: 700; color: var(--red); white-space: nowrap; }
+.price-table tr:last-child td { border-bottom: none; }
+.price-table tr:hover td { background: #f8fafc; }
+.price-note { font-size: 0.85rem; color: #64748b; font-style: italic; margin-top: 8px; }
+
+/* === ЭТАПЫ РАБОТЫ === */
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 30px 0; }
+.step-card { background: #fff; border-radius: 12px; padding: 24px; border: 1px solid #e2e8f0; position: relative; transition: all 0.3s; }
+.step-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+.step-num { width: 40px; height: 40px; border-radius: 50%; background: var(--red); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 800; margin-bottom: 14px; }
+.step-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.step-card p { font-size: 0.85rem; color: #64748b; margin: 0; line-height: 1.5; }
+
+/* === ПРЕИМУЩЕСТВА === */
+.features-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; list-style: none; padding: 0; }
+.features-list li { display: flex; align-items: flex-start; gap: 10px; padding: 12px 16px; background: #f8fafc; border-radius: 8px; font-size: 0.92rem; color: #334155; }
+.features-list li i { color: var(--red); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+
+/* === FAQ === */
+.faq-item { border: 1px solid #e2e8f0; border-radius: 10px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s; }
+.faq-item:hover { border-color: rgba(196,30,58,0.2); }
+.faq-item summary { padding: 18px 24px; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; font-size: 0.95rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "\f067"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--red); font-size: 0.85rem; transition: transform 0.3s; }
+.faq-item[open] summary::after { content: "\f068"; }
+.faq-item[open] summary { border-bottom: 1px solid #e2e8f0; }
+.faq-answer { padding: 18px 24px; color: #64748b; font-size: 0.92rem; line-height: 1.6; }
+.faq-answer p { margin-bottom: 8px; }
+
+/* === CTA === */
+.cta-block { background: #0b1f33; color: #fff; padding: 30px; border-radius: 12px; margin: 36px 0 20px; text-align: center; }
+.cta-block h2 { color: #fff; font-size: 1.8rem; margin-bottom: 12px; }
+.cta-block p { color: #fff; margin-bottom: 20px; }
+.cta-block a { display: inline-block; padding: 14px 32px; background: var(--red); color: #fff; border-radius: 10px; font-weight: 700; transition: all 0.3s; }
+.cta-block a:hover { background: var(--red-dark); transform: translateY(-2px); }
+
+/* === FOOTER === */
+.footer { background: var(--navy); color: var(--gray-400); padding: 40px 0 0; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 30px; padding: 10px 0 20px; border-bottom: 1px solid #2a3a4a; }
+.footer h4 { font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; color: #fff; }
+.footer a { display: block; font-size: 0.8rem; margin-bottom: 4px; color: #ccc; text-decoration: none; }
+.footer a:hover { color: #fff; }
+.footer-legal { margin: 20px 0; padding: 20px 0; background: #050e1c; }
+.footer-legal-inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.footer-legal-block { font-size: 0.85rem; color: var(--gray-400); line-height: 1.8; }
+.footer-legal-block strong { color: #fff; display: block; margin-bottom: 8px; }
+.footer-copyright { font-size: 0.7rem; text-align: center; padding: 12px 0 6px; opacity: 0.5; }
+
+/* === ХЛЕБНЫЕ КРОШКИ === */
+.breadcrumbs { padding: 100px 0 0; background: var(--navy); }
+.breadcrumbs a { color: #94a3b8; font-size: 0.85rem; }
+.breadcrumbs a:hover { color: #fff; }
+.breadcrumbs span { color: #64748b; font-size: 0.85rem; }
+
+/* === МОБИЛЬНАЯ ВЕРСИЯ === */
+@media (max-width: 768px) {
+  .container { padding: 0 12px !important; max-width: 100% !important; }
+  .header-inner { padding: 10px 0 !important; gap: 6px !important; }
+  .logo { font-size: 1rem !important; }
+  .header-actions { gap: 6px !important; margin-left: auto !important; flex-shrink: 0 !important; }
+  .header-phone span { display: none !important; }
+  .header-phone i { font-size: 1.2rem !important; margin: 0 !important; }
+  .header-cta { padding: 6px 2px !important; font-size: 0.6rem !important; line-height: 1.1 !important; text-align: center !important; white-space: normal !important; width: 60px !important; flex-shrink: 0 !important; border-radius: 6px !important; word-break: break-word !important; }
+  .nav-list { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 4px !important; padding: 8px 4px !important; }
+  .nav-list a { text-align: center !important; padding: 6px 2px !important; font-size: 0.65rem !important; line-height: 1.15 !important; border-radius: 6px !important; word-break: break-word !important; position: relative !important; }
+  .nav-list a.active { color: var(--red) !important; background: rgba(196, 30, 58, 0.1) !important; font-weight: 700 !important; opacity: 1 !important; }
+  .nav-list a.active::after { display: block !important; content: "" !important; position: absolute !important; bottom: 2px !important; left: 50% !important; transform: translateX(-50%) !important; width: 60% !important; height: 2px !important; background: var(--red) !important; border-radius: 2px !important; }
+  
+  /* Отступ 180px для мобильных */
+  .breadcrumbs { padding: 180px 0 0 !important; }
+  
+  .hero { padding: 20px 0 40px !important; }
+  .hero .hero-flex { flex-direction: column !important; gap: 20px !important; }
+  .hero .hero-text { max-width: 100% !important; text-align: center !important; }
+  .hero .hero-image { flex: 0 0 100% !important; max-width: 100% !important; text-align: center !important; }
+  .hero .hero-image img { max-width: 85% !important; margin: 0 auto !important; }
+  .hero h1 { font-size: 1.8rem !important; }
+  .hero p { font-size: 1rem !important; }
+  .hero-badges { justify-content: center !important; }
+  .hero-cta { justify-content: center !important; }
+  .hero-cta a { padding: 12px 20px !important; font-size: 0.85rem !important; }
+  .section { padding: 30px 0 !important; }
+  .section h2 { font-size: 1.4rem !important; }
+  .services-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .service-card { padding: 20px !important; }
+  .service-card h3 { font-size: 1.05rem !important; }
+  .price-table { font-size: 0.85rem !important; }
+  .price-table th { padding: 10px 12px !important; font-size: 0.75rem !important; }
+  .price-table td { padding: 10px 12px !important; font-size: 0.85rem !important; }
+  .steps-grid { grid-template-columns: 1fr !important; }
+  .step-card { padding: 20px !important; }
+  .features-list { grid-template-columns: 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr !important; gap: 30px !important; text-align: center !important; }
+  .footer h4 { text-align: center !important; }
+  .footer a { display: inline-block !important; margin: 0 8px 8px !important; word-break: break-word !important; }
+  .footer-legal-inner { grid-template-columns: 1fr !important; gap: 24px !important; text-align: center !important; }
+  .footer-legal-block { word-break: break-word !important; }
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">РУСКОРПОРАЦИЯ</a>
+      <div class="header-actions">
+        <a href="tel:+79250474225" class="header-phone">
+          <i class="fas fa-phone"></i> <span>+7 (925) 047-42-25</span>
+        </a>
+        <a href="/kontakty/" class="header-cta">Заказать охрану</a>
+      </div>
+    </div>
+  </div>
+  <nav class="nav" aria-label="Главное меню">
+    <div class="container">
+      <div class="nav-list">
+        <a href="/">Главная</a>
+        <a href="/dogovor/">Договор</a>
+        <a href="/fizicheskaya-ohrana/" class="active" aria-current="page">Физ. охрана</a>
+        <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+        <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+        <a href="/ohrana-pult/">Пультовая охрана</a>
+        <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+        <a href="/stati/">Статьи</a>
+        <a href="/kontakty/">Контакты</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- === ХЛЕБНЫЕ КРОШКИ === -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <a href="/">Главная</a> <span>/ <a href="/fizicheskaya-ohrana/">Физическая охрана</a> / Охрана АЗС</span>
+    </div>
+  </div>
+
+  <!-- === HERO === -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-flex">
+        <div class="hero-text">
+          <h1>Охрана АЗС в Москве</h1>
+          <p>Комплексная защита автозаправочных станций. Круглосуточный пост, строгий контроль терминалов и кассовой зоны, видеонаблюдение. Защита персонала, топлива и имущества от неправомерных действий.</p>
+          <div class="hero-badges">
+            <div class="hero-badge"><i class="fas fa-shield-halved"></i> Лицензия Росгвардии</div>
+            <div class="hero-badge"><i class="fas fa-clock"></i> Круглосуточно 24/7</div>
+            <div class="hero-badge"><i class="fas fa-video"></i> Видеоконтроль</div>
+          </div>
+          <div class="hero-cta">
+            <a href="tel:+79250474225" class="btn-red"><i class="fas fa-phone"></i> Позвонить</a>
+            <a href="https://t.me/Almaz77755" target="_blank" rel="noopener" class="btn-outline"><i class="fab fa-telegram-plane"></i> Telegram</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/images/msk-azs.jpg" alt="Охрана АЗС: круглосуточный пост и видеонаблюдение" loading="lazy" width="400" height="300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === РИСКИ === -->
+  <section class="section">
+    <div class="container">
+      <h2>Риски работы АЗС без охраны</h2>
+      <p>Автозаправочные станции работают круглосуточно и привлекают внимание злоумышленников. Без профессиональной охраны вы рискуете столкнуться с:</p>
+      <ul>
+        <li><strong>Нападениями на кассиров.</strong> Угроза жизни персонала и хищение выручки.</li>
+        <li><strong>Кражами топлива.</strong> Несанкционированный слив или отпуск ГСМ без оплаты.</li>
+        <li><strong>Вандализмом и порчей имущества.</strong> Повреждение колонок, оборудования, фасада здания.</li>
+        <li><strong>Конфликтами с посетителями.</strong> Агрессивное поведение, нарушение общественного порядка на территории.</li>
+        <li><strong>Проникновением в служебные зоны.</strong> Доступ посторонних к резервуарам, складским помещениям и серверным.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- === ВИДЫ УСЛУГ === -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <h2 class="center">Что входит в охрану АЗС</h2>
+      <p style="text-align:center; color:#64748b; max-width:700px; margin:0 auto 30px;">Мы разрабатываем индивидуальный план безопасности с учетом планировки станции и интенсивности трафика.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3><i class="fas fa-user-shield"></i>Круглосуточный пост</h3>
+          <p>Физическое присутствие лицензированного охранника. Контроль территории, предотвращение конфликтов, обеспечение порядка.</p>
+        </div>
+        <div class="service-card">
+          <h3><i class="fas fa-gas-pump"></i>Контроль терминалов</h3>
+          <p>Визуальный и аппаратный контроль за процессом заправки, предотвращение хищений ГСМ и манипуляций с оборудованием.</p>
+        </div>
+        <div class="service-card">
+          <h3><i class="fas fa-video"></i>Видеонаблюдение</h3>
+          <p>Установка камер с обзором колонок, кассы, въезда/выезда и периметра. Запись архива и удаленный мониторинг.</p>
+        </div>
+        <div class="service-card">
+          <h3><i class="fas fa-bell"></i>Тревожная кнопка</h3>
+          <p>Мгновенная передача сигнала на пульт при угрозе ограбления. Прибытие вооруженной группы быстрого реагирования за 5–15 минут.</p>
+        </div>
+        <div class="service-card">
+          <h3><i class="fas fa-door-closed"></i>Контроль доступа</h3>
+          <p>Ограничение входа в операторские, складские помещения и зоны резервуаров только для авторизованного персонала.</p>
+        </div>
+        <div class="service-card">
+          <h3><i class="fas fa-route"></i>Патрулирование</h3>
+          <p>Регулярные обходы территории по маршруту, проверка целостности ограждений, освещения и запорных устройств.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === ЦЕНЫ === -->
+  <section class="section">
+    <div class="container">
+      <h2 class="center">Стоимость охраны АЗС</h2>
+      <p style="text-align:center; color:#64748b; max-width:700px; margin:0 auto 30px;">Цена формируется исходя из режима работы, количества постов и необходимого оборудования.</p>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Услуга</th>
+            <th>Режим</th>
+            <th>Цена от, ₽/мес.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Круглосуточный физический пост (1 охранник)</td>
+            <td>24/7</td>
+            <td>190 000</td>
+          </tr>
+          <tr>
+            <td>Ночной пост (усиленная охрана)</td>
+            <td>22:00 – 06:00</td>
+            <td>95 000</td>
+          </tr>
+          <tr>
+            <td>Пультовая охрана + видеонаблюдение</td>
+            <td>24/7</td>
+            <td>от 15 000</td>
+          </tr>
+          <tr>
+            <td>Монтаж и настройка системы видеонаблюдения</td>
+            <td>Разово</td>
+            <td>от 35 000</td>
+          </tr>
+          <tr>
+            <td>Установка и обслуживание тревожной кнопки</td>
+            <td>24/7</td>
+            <td>от 5 000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="price-note">Для сетевых АЗС действуют специальные корпоративные тарифы и скидки при заключении договора на несколько объектов.</p>
+    </div>
+  </section>
+
+  <!-- === ЭТАПЫ РАБОТЫ === -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <h2 class="center">Как мы организуем охрану</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Аудит объекта</h3>
+          <p>Выезд специалиста на АЗС. Оценка уязвимых мест, "слепых" зон и логистики движения транспорта.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>План безопасности</h3>
+          <p>Разработка регламента действий охранника, схем расстановки камер и маршрутов патрулирования.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Договор</h3>
+          <p>Согласование условий, подписание договора с прописанной материальной ответственностью ЧОП.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>Запуск и контроль</h3>
+          <p>Вывод обученного персонала на объект, тестирование связи и тревожных систем, регулярные проверки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === ПРЕИМУЩЕСТВА === -->
+  <section class="section">
+    <div class="container">
+      <h2 class="center">Почему сети АЗС выбирают нас</h2>
+      <ul class="features-list">
+        <li><i class="fas fa-shield-halved"></i> Лицензия Росгвардии № Л056-00106-59/00033018</li>
+        <li><i class="fas fa-id-badge"></i> Охранники 4–6 разряда, прошедшие спецподготовку</li>
+        <li><i class="fas fa-bolt"></i> Прибытие ГБР на место инцидента за 5–15 минут</li>
+        <li><i class="fas fa-handshake"></i> Полная материальная ответственность по договору</li>
+        <li><i class="fas fa-rotate"></i> Бесперебойная работа: мгновенная замена сотрудника при болезни</li>
+        <li><i class="fas fa-headset"></i> Личный менеджер и круглосуточная диспетчерская</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- === FAQ === -->
+  <section class="section" style="background:#f8fafc;">
+    <div class="container">
+      <h2 class="center">Частые вопросы</h2>
+      <div style="max-width:800px; margin:30px auto 0;">
+        <details class="faq-item" open>
+          <summary>Вооружен ли охранник на посту АЗС?</summary>
+          <div class="faq-answer">
+            <p>Да, по желанию заказчика мы можем предоставить вооруженного охранника 6-го разряда. Это значительно повышает уровень безопасности и является мощным сдерживающим фактором для злоумышленников. Все сотрудники имеют право на применение спецсредств и оружия в строгом соответствии с законом РФ.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Что делает охранник при попытке ограбления кассы?</summary>
+          <div class="faq-answer">
+            <p>Главный приоритет — безопасность людей. Охранник немедленно нажимает тревожную кнопку, блокирует доступ к кассовой зоне, оповещает персонал о необходимости следовать протоколу безопасности и встречает группу быстрого реагирования. Мы не поощряем неоправданный риск со стороны сотрудников.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли охранять только в ночное время?</summary>
+          <div class="faq-answer">
+            <p>Да, это одна из самых востребованных услуг для трассовых АЗС. Мы предоставляем охрану на конкретные смены (например, с 22:00 до 06:00), что позволяет оптимизировать бюджет без потери безопасности в наиболее уязвимый период.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Как контролируется работа самого охранника?</summary>
+          <div class="faq-answer">
+            <p>Мы используем систему электронного патрулирования (метки на маршруте), регулярные внезапные проверки инспекторами ЧОП, а также интеграцию с вашей системой видеонаблюдения. Вы всегда можете запросить отчет о несении службы.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- === CTA === -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-block">
+        <h2>Обеспечьте безопасность вашей АЗС</h2>
+        <p>Оставьте заявку на бесплатный выезд специалиста для оценки объекта и расчёта стоимости охраны.</p>
+        <a href="tel:+79250474225">Позвонить: +7 (925) 047-42-25</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- === FOOTER === -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div style="font-weight:600; font-size:1rem; color:#fff; margin-bottom:8px;">ЧОП «РУСКОРПОРАЦИЯ»</div>
+        <p style="font-size:0.8rem; line-height:1.5; opacity:0.8;">Лицензированный ЧОП — профессиональная охрана объектов и людей с 2018 года.</p>
+      </div>
+      <div>
+        <h4>Услуги</h4>
+        <a href="/fizicheskaya-ohrana/">Физическая охрана</a>
+        <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+        <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+        <a href="/ohrana-pult/">Пультовая охрана</a>
+      </div>
+      <div>
+        <h4>Информация</h4>
+        <a href="/dogovor/">Договор охраны</a>
+        <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+        <a href="/kontakty/">Контакты</a>
+        <a href="/stati/">Статьи</a>
+      </div>
+      <div>
+        <h4>Связаться</h4>
+        <a href="tel:+79250474225"><i class="fas fa-phone"></i> +7 (925) 047-42-25</a>
+        <a href="mailto:fizohrana@ruscor24.ru"><i class="fas fa-envelope"></i> fizohrana@ruscor24.ru</a>
+        <a href="https://t.me/Almaz77755" target="_blank" rel="noopener"><i class="fab fa-telegram-plane"></i> Telegram</a>
+        <a href="https://wa.me/79771340739" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <p style="font-size:0.8rem; margin-top:8px; color:#aaa;">Круглосуточно, без выходных</p>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <div class="container">
+        <div class="footer-legal-inner">
+          <div class="footer-legal-block">
+            <strong>Реквизиты</strong>
+            ООО ЧОП «Рускорпорация»<br>
+            ИНН: 5902050810<br>
+            КПП: 590501001<br>
+            ОГРН: 1185958064665
+          </div>
+          <div class="footer-legal-block">
+            <strong>Лицензия</strong>
+            № Л056-00106-59/00033018<br>
+            от 29.11.2018 г.<br>
+            <span style="opacity:0.7;">Выдана: УР по Пермскому краю</span>
+          </div>
+          <div class="footer-legal-block">
+            <strong>География работы</strong>
+            Москва и Московская область<br>
+            Пермь, Пермский край<br>
+            Сочи, Краснодарский край
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2018–2026 ООО ЧОП «Рускорпорация» — охрана объектов и физических лиц. Все права защищены.
+    </div>
+  </div>
+</footer>
+
+<!-- === ПЛАВАЮЩИЕ КНОПКИ === -->
+<div class="float-buttons" style="position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:10px; z-index:999;">
+  <a href="https://t.me/Almaz77755" target="_blank" rel="noopener" style="width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; background:#0088cc; box-shadow:0 4px 12px rgba(0,0,0,0.2);" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+  <a href="https://wa.me/79771340739" target="_blank" rel="noopener" style="width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; background:#25d366; box-shadow:0 4px 12px rgba(0,0,0,0.2);" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a href="tel:+79250474225" style="width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:#fff; background:var(--red); box-shadow:0 4px 12px rgba(0,0,0,0.2);" aria-label="Позвонить"><i class="fas fa-phone"></i></a>
+</div>
+</body>
+</html>

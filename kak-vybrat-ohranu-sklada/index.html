@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Как выбрать охрану склада: полное руководство | ЧОО «Рускорпорация»</title>
+  <meta name="description" content="Ключевые критерии выбора охраны склада: от физической защиты до пультового мониторинга. Как избежать краж и сохранить товар с ЧОО «Рускорпорация» в Москве, Перми и Сочи.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-light: #0f1f38;
+      --red: #c41e3a;
+      --red-hover: #a01830;
+      --white: #ffffff;
+      --gray-text: #cbd5e1;
+      --gray-border: #1f2a40;
+      --bg-light: #f8f9fa;
+      --card-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: #1a2a3a;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* === ШАПКА === */
+    .header { background: var(--navy); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; }
+    .logo { color: var(--white); font-weight: 900; font-size: 1.5rem; letter-spacing: -0.5px; line-height: 1.1; text-decoration: none; display: flex; flex-direction: column; }
+    .logo span { font-size: 0.75rem; font-weight: 500; opacity: 0.7; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+    .header-actions { display: flex; align-items: center; gap: 20px; margin-left: auto; }
+    .header-phone { color: var(--white); font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; text-decoration: none; white-space: nowrap; }
+    .header-phone i { color: var(--red); }
+    .header-cta { background: var(--red); color: var(--white); padding: 10px 24px; border-radius: 10px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: all 0.3s; white-space: nowrap; }
+    .header-cta:hover { background: var(--red-hover); transform: translateY(-2px); }
+
+    .nav { background: var(--navy-light); border-top: 1px solid rgba(255,255,255,0.04); }
+    .nav-list { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; padding: 6px 0; }
+    .nav-list a { color: var(--white); padding: 10px 16px; font-size: 0.88rem; font-weight: 500; opacity: 0.75; border-radius: 8px; transition: all 0.3s; text-decoration: none; }
+    .nav-list a:hover { opacity: 1; background: rgba(196,30,58,0.12); color: #ff6b7a; }
+    .nav-list a.active { opacity: 1; color: var(--red); background: rgba(196,30,58,0.1); font-weight: 600; }
+
+    /* === ХЛЕБНЫЕ КРОШКИ === */
+    .breadcrumbs {
+      padding: 130px 0 20px;
+      background: #f1f5f9;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .breadcrumbs a { color: #64748b; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .breadcrumbs a:hover { color: var(--red); }
+    .breadcrumbs span { color: var(--navy); font-size: 0.9rem; font-weight: 600; }
+
+    /* === ТИПОГРАФИКА СТАТЬИ === */
+    h1 { font-size: 2.5rem; font-weight: 800; color: var(--navy); margin-bottom: 24px; line-height: 1.2; }
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 60px;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    h2::before {
+      content: "";
+      position: absolute;
+      left: -12px; top: 0; bottom: 0;
+      width: 6px;
+      background: var(--red);
+      border-radius: 3px;
+    }
+    h3 { font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-top: 30px; margin-bottom: 15px; }
+    p { color: #334155; margin-bottom: 16px; font-size: 1.05rem; }
+    ul, ol { margin-bottom: 20px; padding-left: 28px; }
+    li { margin-bottom: 12px; color: #334155; position: relative; }
+    li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: var(--red);
+      position: absolute; left: -28px; top: 4px;
+    }
+    strong { color: var(--navy); }
+    .text-red { color: var(--red); font-weight: 700; }
+
+    /* === ЗАГОЛОВОК СТАТЬИ (HERO) === */
+    .article-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 70px 0;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    .article-header h1 { color: var(--white); max-width: 800px; margin: 0 auto 20px; }
+    .article-header p { color: var(--gray-text); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+
+    /* === ВЫДЕЛЕННЫЙ БЛОК (HIGHLIGHT) === */
+    .highlight-box {
+      background: #fff;
+      border: 1px solid var(--gray-border);
+      border-left: 5px solid var(--red);
+      padding: 32px;
+      margin: 40px 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* === ЦЕНЫ И БЭЙДЖИ === */
+    .price-tag {
+      display: inline-block;
+      background: rgba(196, 30, 58, 0.1);
+      color: var(--red);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1.15rem;
+    }
+    .license-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #f1f5f9;
+      padding: 14px 22px;
+      border-radius: 50px;
+      color: var(--navy);
+      font-weight: 600;
+      margin-top: 16px;
+      border: 1px solid #e2e8f0;
+    }
+    .license-badge i { color: var(--red); }
+
+    /* === СЕТКА УСЛУГ === */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
+    .solution-card {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+      border: 1px solid #e2e8f0;
+      transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .solution-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+      border-color: var(--red);
+    }
+    .solution-card h3 {
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+    }
+    .solution-card .price {
+      margin-top: auto;
+      color: var(--red);
+      font-weight: 700;
+      font-size: 1.15rem;
+      padding-top: 16px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    /* === CTA === */
+    .cta-section {
+      background: var(--navy);
+      color: var(--white);
+      padding: 60px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      padding: 20px 44px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+      transition: all 0.3s;
+      margin-top: 24px;
+    }
+    .cta-btn:hover {
+      background: var(--red-hover);
+      transform: scale(1.03);
+      box-shadow: 0 8px 26px rgba(196, 30, 58, 0.6);
+    }
+    .contact-info { font-size: 1.1rem; margin-top: 18px; color: var(--gray-text); }
+    .contact-info a { color: var(--white); text-decoration: underline; }
+
+    /* === ФУТЕР === */
+    .footer { background: var(--navy); color: var(--gray-text); padding: 36px 0; text-align: center; font-size: 0.85rem; border-top: 1px solid var(--gray-border); }
+
+    /* === АДАПТИВ === */
+    @media (max-width: 768px) {
+      .header-inner { padding: 10px 0; gap: 10px; flex-wrap: wrap; }
+      .logo { font-size: 1rem; }
+      .logo span { display: none; }
+      .header-phone span { display: none; }
+      .header-phone i { font-size: 1.2rem; margin: 0; }
+      .header-cta { padding: 8px 12px; font-size: 0.75rem; width: 100%; max-width: 220px; text-align: center; }
+      
+      .nav-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 8px 10px; }
+      .nav-list a { text-align: center; padding: 8px 4px; font-size: 0.7rem; line-height: 1.2; }
+      
+      .breadcrumbs { padding: 100px 0 15px; }
+      h1 { font-size: 1.9rem; }
+      .article-header { padding: 50px 0; }
+      .article-header h1 { font-size: 1.9rem; }
+      .cta-btn { width: 100%; max-width: 320px; }
+      li::before { left: -18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">РУСКОРПОРАЦИЯ <span>охрана и консалтинг</span></a>
+        <div class="header-actions">
+          <a href="tel:+79250474225" class="header-phone">
+            <i class="fas fa-phone"></i> <span>+7 (925) 047-42-25</span>
+          </a>
+          <a href="/kontakty/" class="header-cta">Заказать охрану</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-list">
+          <a href="/">Главная</a>
+          <a href="/dogovor/">Договор</a>
+          <a href="/fizicheskaya-ohrana/">Физ. охрана</a>
+          <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+          <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+          <a href="/ohrana-pult/">Пультовая охрана</a>
+          <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+          <a href="/stati/" class="active">Статьи</a>
+          <a href="/kontakty/">Контакты</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ХЛЕБНЫЕ КРОШКИ -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <a href="/">Главная</a> &nbsp;→&nbsp; <a href="/stati/">Статьи</a> &nbsp;→&nbsp; <span>Как выбрать охрану склада</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- Заголовок статьи -->
+    <header class="article-header">
+      <div class="container">
+        <h1>Как выбрать надежную охрану склада: полное руководство для бизнеса</h1>
+        <p>Склад — это сердце логистики и главная точка притяжения для злоумышленников. Потери от внутренних и внешних краж могут достигать миллионов рублей в год. Разбираем, на что обращать внимание при выборе ЧОП и как выстроить непробиваемую защиту.</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <p>ЧОО «Рускорпорация» ежедневно обеспечивает безопасность логистических комплексов, складов стройматериалов и распределительных центров в Москве, Московской области, Перми и Сочи. В этой статье мы расскажем, как отличить профессиональную охранную компанию от фирмы-однодневки.</p>
+
+      <h2>Почему стандартной сигнализации недостаточно</h2>
+      <p>Многие владельцы бизнеса считают, что установки датчиков движения и тревожной кнопки вполне достаточно. На практике это лишь часть системы. Сигнализация лишь фиксирует факт проникновения, но не предотвращает его. Профессиональная охрана склада — это комплекс, который включает:</p>
+      
+      <div class="highlight-box">
+        <ul>
+          <li><strong>Контроль КПП и досмотр.</strong> Проверка транспорта при въезде и выезде, сверка путевых листов и товарно-транспортных накладных (ТТН) для предотвращения вывоза ТМЦ под видом «пустой машины».</li>
+          <li><strong>Регулярное патрулирование.</strong> Обход территории по заданному маршруту с фиксацией через электронные ключи (Touch Memory) или RFID-метки, что исключает «спящие» посты.</li>
+          <li><strong>Интеграция с СКУД и видеонаблюдением.</strong> Охранник не просто сидит в будке, он управляет доступом и мгновенно реагирует на сигналы с камер, оснащенных аналитикой движения.</li>
+        </ul>
+      </div>
+
+      <h2>5 главных критериев выбора ЧОП для склада</h2>
+      <p>Чтобы не потерять товар и не столкнуться с юридическими проблемами, проверяйте охранную компанию по этому чек-листу:</p>
+      <ol>
+        <li><strong>Действующая лицензия Росгвардии.</strong> Без нее деятельность незаконна, а в случае кражи страховая компания откажет в выплате.</li>
+        <li><strong>Пункт о материальной ответственности в договоре.</strong> Профессиональный ЧОП всегда готов нести финансовую ответственность за сохранность вашего имущества в оговоренных пределах.</li>
+        <li><strong>Опыт работы именно со складами.</strong> Охрана ювелирного магазина и охрана склада пиломатериалов требуют принципиально разных подходов и инструкций.</li>
+        <li><strong>Собственная или партнерская Группа быстрого реагирования (ГБР).</strong> Время прибытия на склад, расположенный за городом, критически важно. Оно не должно превышать 15–20 минут.</li>
+        <li><strong>Прозрачная отчетность.</strong> Возможность получать фотоотчеты, логи проходов и данные GPS-трекинга патрулей в режиме реального времени.</li>
+      </ol>
+
+      <h2>Форматы защиты складских комплексов</h2>
+      <p>В зависимости от площади, удаленности и ценности хранимого товара, мы предлагаем несколько решений:</p>
+
+      <div class="solutions-grid">
+        <article class="solution-card">
+          <h3><i class="fas fa-user-shield" style="color:var(--red);"></i>Физический пост охраны</h3>
+          <p>Круглосуточное дежурство на КПП, контроль въезда/выезда, досмотр транспорта, обход территории. Идеально для крупных логистических хабов.</p>
+          <span class="price">Стоимость — от <span class="price-tag">190 000 ₽</span> в месяц за пост</span>
+        </article>
+
+        <article class="solution-card">
+          <h3><i class="fas fa-satellite-dish" style="color:var(--red);"></i>Пультовая охрана + ГБР</h3>
+          <p>Монтаж датчиков открытия ворот, движения и разбития стекла. При срабатывании на объект немедленно выезжает вооруженный экипаж ГБР.</p>
+          <span class="price">Стоимость — от <span class="price-tag">5 000 ₽</span> в месяц</span>
+        </article>
+
+        <article class="solution-card">
+          <h3><i class="fas fa-layer-group" style="color:var(--red);"></i>Комплексная защита</h3>
+          <p>Сочетание физического поста, видеонаблюдения с аналитикой, СКУД для персонала и регулярных аудитов безопасности нашими специалистами.</p>
+          <span class="price">Индивидуальный расчет под объект</span>
+        </article>
+      </div>
+
+      <h2>Гарантии ЧОО «Рускорпорация»</h2>
+      <p>Мы не просто предоставляем людей в форме. Мы берем на себя юридические и финансовые обязательства. Наша деятельность полностью легальна, а сотрудники проходят строгий отбор, регулярные проверки на полиграфе и тренировки по действиям в нештатных ситуациях.</p>
+      
+      <div class="license-badge">
+        <i class="fas fa-file-contract"></i>
+        <span>Лицензия № Л056‑00106‑59/00033018 от 29.11.2018 г.</span>
+      </div>
+      
+      <p style="margin-top: 20px;">Кроме того, мы помогаем грамотно составить должностные инструкции для охранников именно под специфику вашего склада, чтобы исключить двусмысленность в их обязанностях.</p>
+
+      <h2>Как начать сотрудничество</h2>
+      <p>Чтобы подобрать оптимальное решение для вашего складского комплекса, достаточно трёх шагов:</p>
+      <ol>
+        <li><strong>Заявка на сайте или звонок.</strong> Сообщите площадь склада, тип хранимого товара, количество ворот и режим работы.</li>
+        <li><strong>Бесплатный выездной аудит.</strong> Наш специалист приедет на объект, оценит уязвимости периметра, освещенность и «слепые зоны», после чего подготовит смету.</li>
+        <li><strong>Заключение договора.</strong> Фиксируем стоимость, график патрулирования, порядок материальной ответственности и KPI.</li>
+      </ol>
+
+      <p>Не ждите инвентаризации, чтобы обнаружить недостачу. Доверьте безопасность вашего товара профессионалам уже сегодня.</p>
+    </div>
+
+    <!-- CTA Секция -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 style="color: var(--white); border-color: transparent; margin-top: 0;">Готовы защитить свой склад?</h2>
+        <p>Оставьте заявку, и мы рассчитаем стоимость охраны вашего объекта уже сегодня.</p>
+        
+        <a href="/kontakty/" class="cta-btn">Рассчитать стоимость охраны</a>
+        
+        <div class="contact-info">
+          Или позвоните прямо сейчас: <a href="tel:+79250474225">+7 (925) 047‑42‑25</a><br>
+          Сайт: <a href="https://ohrana.tech">ohrana.tech</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2018–2026 ООО ЧОП «Рускорпорация охрана и консалтинг». Все права защищены. Лицензия № Л056-00106-59/00033018</p>
+    </div>
+  </footer>
+
+</body>
+</html>

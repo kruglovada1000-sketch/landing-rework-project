@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Охрана торговых центров в Москве — ЧОП Рускорпорация</title>
+    <meta name="description" content="Профессиональная охрана торговых центров в Москве и МО. Охрана ТЦ с оружием, контроль посетителей, антикражные системы, видеонаблюдение. Лицензия Росгвардии." />
+    <link rel="canonical" href="https://ohrana.tech/ohrana-torgovyh-centrov/" />
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() { (m[i].a = m[i].a || []).push(arguments); };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=111882478', 'ym');
+        ym(111882478, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/111882478" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ============ БАЗА ============ */
+        :root {
+            --bg: #0B1017;
+            --bg2: #0E1520;
+            --panel: #121B27;
+            --panel2: #17222F;
+            --ink: #EAF0F7;
+            --mut: #9DB0C4;
+            --line: rgba(255, 255, 255, .08);
+            --amber: #F7B32B;
+            --amber2: #FFCF5C;
+            --amber-deep: #C98A08;
+            --danger: #E4573D;
+            --ok: #4CC38A;
+            --steel: #5E88AE;
+            --disp: 'Russo One', system-ui, sans-serif;
+            --body: 'Golos Text', system-ui, sans-serif;
+            --r: 14px;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--body);
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: default;
+        }
+        * {
+            cursor: inherit;
+        }
+        a,
+        button,
+        select,
+        summary,
+        label[for],
+        [role="button"],
+        input[type="submit"],
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="number"],
+        textarea {
+            cursor: text;
+        }
+        ::selection {
+            background: var(--amber);
+            color: #161006;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+        }
+        button {
+            font-family: inherit;
+            background: none;
+            border: none;
+            color: inherit;
+        }
+        h1,
+        h2,
+        h3 {
+            font-family: var(--disp);
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: .01em;
+        }
+        h2 {
+            font-size: clamp(1.5rem, 3.2vw, 2.3rem);
+            text-transform: uppercase;
+        }
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        section {
+            padding: 84px 0;
+            position: relative;
+        }
+        :focus-visible {
+            outline: 2px solid var(--amber);
+            outline-offset: 3px;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            pointer-events: none;
+            opacity: .045;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0;
+            z-index: 3000;
+            background: linear-gradient(90deg, var(--amber), var(--amber2));
+        }
+
+        /* ============ КНОПКИ ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 10px;
+            padding: 14px 24px;
+            transition: transform .25s, box-shadow .25s, border-color .25s, background .25s;
+            white-space: nowrap;
+        }
+        .btn:active {
+            transform: translateY(1px) scale(.99);
+        }
+        .btn-amber {
+            background: linear-gradient(180deg, var(--amber2), #EFA410);
+            color: #1C1305;
+            box-shadow: 0 6px 22px rgba(247, 179, 43, .22);
+        }
+        .btn-amber:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(247, 179, 43, .4);
+        }
+        .btn-ghost {
+            border: 1px solid rgba(255, 255, 255, .22);
+            color: var(--ink);
+            background: rgba(255, 255, 255, .02);
+        }
+        .btn-ghost:hover {
+            border-color: var(--amber);
+            color: var(--amber2);
+            transform: translateY(-2px);
+        }
+        .btn-success {
+            background: linear-gradient(180deg, var(--ok), #3AA876);
+            color: #0B1017;
+        }
+        .btn-success:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(76, 195, 138, .3);
+        }
+        .btn-collapse {
+            background: rgba(255, 255, 255, .06);
+            color: var(--mut);
+            border: 1px solid var(--line);
+        }
+        .btn-collapse:hover {
+            background: rgba(255, 255, 255, .12);
+            color: var(--ink);
+            transform: translateY(-2px);
+        }
+        .kick {
+            display: inline-block;
+            font-family: var(--disp);
+            font-size: .72rem;
+            letter-spacing: .28em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 14px;
+        }
+        .kick::before {
+            content: "//";
+            margin-right: 8px;
+            color: var(--amber-deep);
+        }
+        .sec-head {
+            max-width: 760px;
+            margin-bottom: 44px;
+        }
+        .sec-head.center {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .sec-head p {
+            color: var(--mut);
+            margin-top: 12px;
+            font-size: 1.05rem;
+        }
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 100px;
+            border: 1px solid var(--line);
+            background: var(--panel);
+            font-size: .85rem;
+            font-weight: 600;
+        }
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            transition: transform .3s, border-color .3s, box-shadow .3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(247, 179, 43, .5);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+        }
+
+        /* появление при скролле */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+        [data-reveal].in {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ============ АКЦИЯ ============ */
+        .promo {
+            background: linear-gradient(90deg, #2A1503, #4A2A05 45%, #2A1503);
+            border-bottom: 1px solid rgba(247, 179, 43, .35);
+            font-size: .9rem;
+        }
+        .promo .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 22px;
+            padding-top: 11px;
+            padding-bottom: 11px;
+        }
+        .promo b {
+            color: var(--amber2);
+        }
+        .promo-timer {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            color: var(--amber2);
+            font-variant-numeric: tabular-nums;
+        }
+        .promo-timer .cd-box {
+            background: rgba(0, 0, 0, .35);
+            border: 1px solid rgba(247, 179, 43, .4);
+            border-radius: 6px;
+            padding: 2px 7px;
+            font-family: var(--disp);
+            font-size: .85rem;
+            min-width: 34px;
+            text-align: center;
+        }
+        .promo-timer i {
+            font-style: normal;
+            font-size: .7rem;
+            color: #D8B36A;
+        }
+
+        /* ============ ШАПКА ============ */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 16, 23, .92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+        }
+        .hd-in {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: none;
+        }
+        .brand-ic {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            flex: none;
+            background: linear-gradient(160deg, var(--amber2), var(--amber-deep));
+            display: grid;
+            place-items: center;
+            color: #1A1204;
+            box-shadow: 0 4px 16px rgba(247, 179, 43, .3);
+        }
+        .brand-name {
+            font-family: var(--disp);
+            font-size: 1.05rem;
+            letter-spacing: .06em;
+            line-height: 1.1;
+        }
+        .brand-sub {
+            font-size: .68rem;
+            letter-spacing: .24em;
+            text-transform: uppercase;
+            color: var(--mut);
+        }
+        .hd-right {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .hd-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            line-height: 1.2;
+        }
+        .chip-247 {
+            font-size: .66rem;
+            font-weight: 800;
+            letter-spacing: .14em;
+            color: var(--ok);
+            border: 1px solid rgba(76, 195, 138, .4);
+            border-radius: 100px;
+            padding: 1px 8px;
+            margin-bottom: 4px;
+        }
+        .hd-phone {
+            font-family: var(--disp);
+            font-size: 1.05rem;
+            transition: color .2s;
+        }
+        .hd-phone:hover {
+            color: var(--amber2);
+        }
+        .burger {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+        .burger span {
+            width: 20px;
+            height: 2px;
+            background: var(--ink);
+            transition: transform .3s, opacity .3s;
+        }
+        .burger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .burger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        nav.nav {
+            border-top: 1px solid var(--line);
+        }
+        nav.nav .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2px;
+        }
+        nav.nav a {
+            padding: 12px 14px;
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--mut);
+            border-bottom: 2px solid transparent;
+            transition: color .2s, border-color .2s;
+        }
+        nav.nav a:hover {
+            color: var(--amber2);
+            border-color: var(--amber);
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            padding: 64px 0 72px;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(700px 420px at 85% 0%, rgba(247, 179, 43, .10), transparent 60%),
+                radial-gradient(500px 400px at 0% 100%, rgba(94, 136, 174, .10), transparent 60%),
+                repeating-linear-gradient(0deg, transparent 0 47px, rgba(255, 255, 255, .025) 47px 48px),
+                repeating-linear-gradient(90deg, transparent 0 47px, rgba(255, 255, 255, .025) 47px 48px);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.06fr .94fr;
+            gap: 52px;
+            align-items: start;
+            position: relative;
+        }
+        .lic-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 16px;
+            border-radius: 100px;
+            border: 1px solid rgba(247, 179, 43, .45);
+            background: rgba(247, 179, 43, .08);
+            color: var(--amber2);
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .04em;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(1.8rem, 4.4vw, 3.15rem);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--amber);
+        }
+        .lead {
+            color: var(--mut);
+            font-size: 1.06rem;
+            max-width: 560px;
+            margin-bottom: 26px;
+        }
+        .hero-checks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 20px;
+            margin-bottom: 28px;
+        }
+        .hero-checks li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-size: .92rem;
+            font-weight: 600;
+        }
+        .hero-checks svg {
+            flex: none;
+            margin-top: 3px;
+            color: var(--amber);
+        }
+        .hero-prices {
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            background: var(--panel);
+            padding: 6px 18px;
+            margin-bottom: 28px;
+            max-width: 520px;
+        }
+        .hero-prices div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            padding: 11px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, .09);
+            font-size: .92rem;
+        }
+        .hero-prices div:last-child {
+            border: none;
+        }
+        .hero-prices b {
+            font-family: var(--disp);
+            color: var(--amber2);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+        .hero-prices span::before {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 2px;
+            background: var(--amber);
+            margin-right: 10px;
+            transform: rotate(45deg);
+        }
+        .hero-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* ===== КАРТИНКА ===== */
+        .hero-fig {
+            position: relative;
+            border-radius: var(--r);
+            overflow: hidden;
+            background: var(--panel);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+            align-self: start;
+        }
+        .hero-fig img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--r);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-fig:hover img {
+            transform: scale(1.02);
+        }
+        .hero-fig::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: linear-gradient(180deg, transparent 55%, rgba(11, 16, 23, .55));
+            border-radius: var(--r);
+        }
+        .fig-chip {
+            position: absolute;
+            left: 14px;
+            bottom: 14px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            background: rgba(11, 16, 23, .85);
+            border: 1px solid rgba(247, 179, 43, .4);
+            border-radius: 100px;
+            padding: 8px 15px;
+            font-size: .8rem;
+            font-weight: 700;
+        }
+        .dot-live {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--ok);
+            position: relative;
+        }
+        .dot-live::after {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 1px solid var(--ok);
+            animation: ping 1.8s ease-out infinite;
+        }
+        @keyframes ping {
+            0% {
+                transform: scale(.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.6);
+                opacity: 0;
+            }
+        }
+
+        /* ============ РИСКИ ============ */
+        #risks {
+            background: var(--bg2);
+            border-block: 1px solid var(--line);
+        }
+        .risks-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px 24px;
+            max-width: 820px;
+            margin: 0 auto;
+            padding-left: 0;
+        }
+        .risks-list li {
+            display: flex;
+            gap: 12px;
+            font-size: .95rem;
+            color: var(--mut);
+            align-items: flex-start;
+            padding: 6px 0;
+        }
+        .risks-list li strong {
+            color: var(--ink);
+            font-weight: 700;
+        }
+        .risks-list svg {
+            flex: none;
+            margin-top: 4px;
+            color: var(--danger);
+        }
+        .risks-note {
+            text-align: center;
+            margin-top: 28px;
+            font-size: .92rem;
+            color: var(--mut);
+        }
+        .risks-note strong {
+            color: var(--amber2);
+        }
+
+        /* ============ УСЛУГИ (сетка) ============ */
+        .svc-grid {
+            display: grid;
+            gap: 16px;
+        }
+        .svc {
+            display: grid;
+            grid-template-columns: 56px 1fr auto;
+            gap: 22px;
+            align-items: center;
+            padding: 26px 28px;
+        }
+        .svc .obj-ic {
+            width: 56px;
+            height: 56px;
+            border-radius: 11px;
+            background: rgba(247, 179, 43, .09);
+            border: 1px solid rgba(247, 179, 43, .25);
+            display: grid;
+            place-items: center;
+            color: var(--amber);
+            transition: background .3s, transform .3s;
+            flex: none;
+        }
+        .svc:hover .obj-ic {
+            background: rgba(247, 179, 43, .18);
+            transform: scale(1.06) rotate(-3deg);
+        }
+        .svc b {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .svc p {
+            font-size: .9rem;
+            color: var(--mut);
+            max-width: 700px;
+        }
+        .svc .more {
+            font-weight: 700;
+            color: var(--amber2);
+            white-space: nowrap;
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            transition: gap .25s;
+        }
+        .svc:hover .more {
+            gap: 14px;
+        }
+
+        /* ============ ЦЕНЫ (таблица) ============ */
+        .price-wrap {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: var(--r);
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+        .price-table thead {
+            background: var(--panel2);
+        }
+        .price-table th {
+            color: var(--amber2);
+            padding: 14px 18px;
+            text-align: left;
+            font-size: .78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+        .price-table th:last-child {
+            text-align: right;
+        }
+        .price-table td {
+            padding: 13px 18px;
+            border-bottom: 1px solid var(--line);
+            font-size: .92rem;
+            color: var(--mut);
+            background: var(--panel);
+        }
+        .price-table td:last-child {
+            text-align: right;
+            font-weight: 700;
+            color: var(--amber2);
+            font-family: var(--disp);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+        .price-table tr:hover td {
+            background: var(--panel2);
+        }
+        .price-note {
+            font-size: .85rem;
+            color: var(--mut);
+            font-style: italic;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        /* ============ ЭТАПЫ ============ */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            counter-reset: step;
+        }
+        .step {
+            padding: 26px 22px;
+            position: relative;
+        }
+        .step-n {
+            font-family: var(--disp);
+            font-size: 2.2rem;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--amber);
+            display: block;
+            margin-bottom: 16px;
+        }
+        .step b {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .step p {
+            font-size: .88rem;
+            color: var(--mut);
+        }
+        .step::after {
+            content: "→";
+            position: absolute;
+            top: 30px;
+            right: -16px;
+            color: var(--amber);
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+        .step:last-child::after {
+            display: none;
+        }
+
+        /* ============ ПРЕИМУЩЕСТВА ============ */
+        #why {
+            background: var(--bg2);
+            border-block: 1px solid var(--line);
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .why {
+            padding: 28px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .why::after {
+            content: attr(data-n);
+            position: absolute;
+            right: 10px;
+            bottom: -22px;
+            font-family: var(--disp);
+            font-size: 5.5rem;
+            color: rgba(255, 255, 255, .045);
+            line-height: 1;
+        }
+        .why .obj-ic {
+            width: 56px;
+            height: 56px;
+            border-radius: 11px;
+            background: rgba(247, 179, 43, .09);
+            border: 1px solid rgba(247, 179, 43, .25);
+            display: grid;
+            place-items: center;
+            color: var(--amber);
+            margin-bottom: 18px;
+            transition: background .3s, transform .3s;
+        }
+        .why:hover .obj-ic {
+            background: rgba(247, 179, 43, .18);
+            transform: scale(1.06) rotate(-3deg);
+        }
+        .why b {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        .why p {
+            font-size: .88rem;
+            color: var(--mut);
+        }
+
+        /* ============ FAQ ============ */
+        .faq-list {
+            max-width: 840px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            background: var(--panel);
+            overflow: hidden;
+            transition: border-color .3s;
+        }
+        .faq-item.open {
+            border-color: rgba(247, 179, 43, .45);
+        }
+        .faq-q {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+            padding: 20px 24px;
+            font-weight: 700;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--ink);
+        }
+        .faq-q .pm {
+            flex: none;
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            display: grid;
+            place-items: center;
+            color: var(--amber);
+            font-size: 1.2rem;
+            font-weight: 400;
+            transition: transform .3s, background .3s;
+        }
+        .faq-item.open .pm {
+            transform: rotate(45deg);
+            background: rgba(247, 179, 43, .12);
+        }
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+        .faq-a p {
+            padding: 0 24px 22px;
+            color: var(--mut);
+            font-size: .93rem;
+        }
+
+        /* ============ CTA ============ */
+        .cta-block {
+            background: linear-gradient(135deg, var(--panel2), var(--panel));
+            border: 1px solid rgba(247, 179, 43, .25);
+            border-radius: var(--r);
+            padding: 48px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-block::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(247, 179, 43, .08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-block .cta-title {
+            font-family: var(--disp);
+            font-size: 1.6rem;
+            color: var(--amber2);
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-block p {
+            color: var(--mut);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .cta-block .btn {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============ ФОРМА ============ */
+        #zayavka {
+            background: var(--bg2);
+            border-block: 1px solid var(--line);
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 44px;
+            align-items: center;
+        }
+        .form-panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 36px;
+        }
+        .form-panel .btn {
+            width: 100%;
+            margin-top: 6px;
+        }
+        .form-note {
+            font-size: .75rem;
+            color: var(--mut);
+            margin-top: 14px;
+            text-align: center;
+        }
+        .field {
+            margin-bottom: 20px;
+        }
+        .field label {
+            display: block;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--mut);
+            margin-bottom: 8px;
+        }
+        select,
+        input[type="number"],
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 13px 15px;
+            transition: border-color .2s;
+        }
+        select:focus,
+        input:focus {
+            border-color: var(--amber);
+            outline: none;
+        }
+        .check-row {
+            display: flex;
+            gap: 11px;
+            align-items: center;
+            font-size: .9rem;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+        .check-row input {
+            width: 19px;
+            height: 19px;
+            accent-color: var(--amber);
+        }
+        .form-ok {
+            text-align: center;
+            padding: 30px 10px;
+        }
+        .form-ok .ok-ic {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: rgba(76, 195, 138, .15);
+            border: 1px solid var(--ok);
+            display: grid;
+            place-items: center;
+            color: var(--ok);
+        }
+        .form-perks {
+            display: grid;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        .form-perks li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            font-size: .95rem;
+        }
+        .form-perks svg {
+            color: var(--amber);
+            flex: none;
+            margin-top: 2px;
+        }
+
+        /* ============ ФУТЕР ============ */
+        footer {
+            background: #080C12;
+            border-top: 1px solid var(--line);
+            padding: 60px 0 0;
+            margin-top: 40px;
+        }
+        .ft-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+            gap: 36px;
+            padding-bottom: 44px;
+        }
+        .ft-grid h4 {
+            font-family: var(--disp);
+            font-size: .85rem;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--amber2);
+            margin-bottom: 18px;
+        }
+        .ft-grid a,
+        .ft-grid li {
+            display: flex;
+            gap: 9px;
+            align-items: center;
+            color: var(--mut);
+            font-size: .9rem;
+            padding: 5px 0;
+            transition: color .2s, transform .2s;
+        }
+        .ft-grid a:hover {
+            color: var(--amber2);
+            transform: translateX(4px);
+        }
+        .ft-about p {
+            color: var(--mut);
+            font-size: .88rem;
+            margin: 14px 0;
+        }
+        .ft-247 {
+            color: var(--ok);
+            font-weight: 700;
+            font-size: .85rem;
+        }
+        .ft-legal {
+            border-top: 1px solid var(--line);
+            padding: 30px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .ft-legal h5 {
+            font-size: .72rem;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 12px;
+        }
+        .ft-legal p,
+        .ft-legal li {
+            font-size: .82rem;
+            color: var(--mut);
+            line-height: 1.7;
+        }
+        .ft-bottom {
+            border-top: 1px solid var(--line);
+            padding: 20px 0;
+            font-size: .78rem;
+            color: var(--mut);
+            text-align: center;
+        }
+
+        /* ============ ЧАТ-ВИДЖЕТ ============ */
+        .chat-btn {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1500;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, var(--amber2), var(--amber-deep));
+            display: grid;
+            place-items: center;
+            color: #1C1305;
+            box-shadow: 0 12px 34px rgba(247, 179, 43, .4);
+            transition: transform .3s;
+        }
+        .chat-btn:hover {
+            transform: scale(1.08);
+        }
+        .chat-btn::before {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px solid rgba(247, 179, 43, .5);
+            animation: ping 2s ease-out infinite;
+        }
+        .chat-panel {
+            position: fixed;
+            right: 22px;
+            bottom: 98px;
+            z-index: 1500;
+            width: 320px;
+            background: var(--panel2);
+            border: 1px solid rgba(247, 179, 43, .4);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+            opacity: 0;
+            transform: translateY(16px) scale(.96);
+            pointer-events: none;
+            transition: all .35s;
+        }
+        .chat-panel.open {
+            opacity: 1;
+            transform: none;
+            pointer-events: auto;
+        }
+        .chat-panel h4 {
+            font-family: var(--disp);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+        .chat-panel p {
+            font-size: .85rem;
+            color: var(--mut);
+            margin-bottom: 18px;
+        }
+        .chat-panel .btn {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 12px;
+        }
+        .chat-panel .btn:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ============ АДАПТИВ ============ */
+        @media(max-width:1080px) {
+            nav.nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg2);
+                border-bottom: 1px solid var(--line);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
+            }
+            nav.nav.open {
+                display: block;
+            }
+            nav.nav .wrap {
+                flex-direction: column;
+                padding: 10px 20px 18px;
+            }
+            nav.nav a {
+                border-bottom: 1px solid var(--line);
+                border-left: none;
+                padding: 14px 4px;
+            }
+            .burger {
+                display: flex;
+            }
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .ft-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .step::after {
+                display: none;
+            }
+        }
+        @media(max-width:960px) {
+            section {
+                padding: 60px 0;
+            }
+            .hero {
+                padding: 40px 0 52px;
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .hero-fig {
+                max-height: 460px;
+            }
+            .hero-fig img {
+                height: auto;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .risks-list {
+                grid-template-columns: 1fr;
+            }
+            .cta-block {
+                padding: 32px 24px;
+            }
+            .ft-legal {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media(max-width:640px) {
+            .hd-phone {
+                font-size: .9rem;
+            }
+            .hd-contact {
+                display: none;
+            }
+            .hd-cta {
+                display: none;
+            }
+            .hero-checks {
+                grid-template-columns: 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            .svc {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .form-panel {
+                padding: 24px;
+            }
+            .ft-grid {
+                grid-template-columns: 1fr;
+            }
+            .promo-timer {
+                margin-left: 0;
+            }
+            .chat-panel {
+                right: 12px;
+                left: 12px;
+                width: auto;
+            }
+            .price-table {
+                font-size: .82rem;
+            }
+            .price-table th,
+            .price-table td {
+                padding: 10px 12px;
+            }
+        }
+        @media(max-width:420px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+        @media(prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+            [data-reveal] {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="progress"></div>
+
+    <!-- АКЦИЯ -->
+    <div class="promo">
+        <div class="wrap">
+            <span>🔥 <b>АКЦИЯ:</b> при заказе до конца месяца — установка оборудования <b>БЕСПЛАТНО</b> (экономия 15 000 ₽)</span>
+            <span class="promo-timer" aria-label="До конца акции">
+                <span class="cd-box" id="cdD">00</span><i>дн</i>
+                <span class="cd-box" id="cdH">23</span><i>час</i>
+                <span class="cd-box" id="cdM">59</span><i>мин</i>
+                <span class="cd-box" id="cdS">59</span><i>сек</i>
+            </span>
+        </div>
+    </div>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="hd-in wrap">
+            <a class="brand" href="/">
+                <span class="brand-ic">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4Z"/></svg>
+                </span>
+                <span>
+                    <span class="brand-name">РУСКОРПОРАЦИЯ</span><br>
+                    <span class="brand-sub">охрана и консалтинг</span>
+                </span>
+            </a>
+            <div class="hd-right">
+                <div class="hd-contact">
+                    <span class="chip-247">● 24/7</span>
+                    <a class="hd-phone" href="tel:+79250474225">+7 (925) 047-42-25</a>
+                </div>
+                <a class="btn btn-amber hd-cta" href="/kontakty/">Заказать охрану</a>
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav" id="nav">
+            <div class="wrap">
+                <a href="/">Главная</a>
+                <a href="/dogovor/">Договор</a>
+                <a href="/fizicheskaya-ohrana/">Физ. охрана</a>
+                <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+                <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+                <a href="/ohrana-pult/">Пультовая охрана</a>
+                <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+                <a href="/stati/">Статьи</a>
+                <a href="/kontakty/">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-copy">
+                <span class="lic-badge" data-reveal>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg>
+                    Лицензия № Л056-00106-59/00033018
+                </span>
+                <h1 data-reveal>Охрана <em>торговых центров</em> в Москве</h1>
+                <p class="lead" data-reveal>Профессиональная <strong>охрана ТЦ</strong> и торговых комплексов. Контроль посетителей, антикражные системы, видеонаблюдение, <strong>охрана торгового центра с оружием</strong>, патрулирование. Лицензия Росгвардии, полная материальная ответственность.</p>
+                <ul class="hero-checks" data-reveal>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Лицензия Росгвардии</li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Контроль посетителей</li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Видеонаблюдение 24/7</li>
+                    <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Охрана с оружием</li>
+                </ul>
+                <div class="hero-prices" data-reveal>
+                    <div><span>Пост на входе (без оружия)</span><b>190 000 ₽ / мес</b></div>
+                    <div><span>Пост на входе (с оружием)</span><b>240 000 ₽ / мес</b></div>
+                    <div><span>Комплекс (2 поста + патруль)</span><b>от 450 000 ₽ / мес</b></div>
+                </div>
+                <div class="hero-btns" data-reveal>
+                    <a class="btn btn-amber" href="tel:+79250474225">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg>
+                        Позвонить
+                    </a>
+                    <a class="btn btn-ghost" href="https://t.me/Almaz77777" target="_blank" rel="noopener">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 4.3 2.9 11.5c-.9.3-.8 1.5 0 1.8l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.5-2.5 4.9 3.6c.6.4 1.5.1 1.7-.7l3-15.6c.2-1-.7-1.7-1.5-1.2ZM8.5 14.4l9.3-5.9c.3-.2.5.1.3.3l-7.6 7-.3 3.2-1.7-4.6Z"/></svg>
+                        Telegram
+                    </a>
+                    <a class="btn btn-ghost" href="https://wa.me/79771340739" target="_blank" rel="noopener">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.3-.5.1-1.1.2-3.4-.7-2.9-1.2-4.8-4.1-4.9-4.3-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7.9-.5 1.2.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4.1.2.1.7-.1 1.6Z"/></svg>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+            <figure class="hero-fig" data-reveal>
+                <img src="/images/ohrana-torgovyh-centrov.png" alt="Охрана торгового центра" width="800" height="600" loading="eager">
+                <figcaption class="fig-chip"><span class="dot-live"></span>Вооружённый пост · 24/7</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- РИСКИ -->
+    <section id="risks">
+        <div class="wrap">
+            <div class="sec-head" data-reveal>
+                <span class="kick">Риски</span>
+                <h2>Чем рискует ТЦ без профессиональной охраны</h2>
+                <p><strong>Охрана торговых центров</strong> — это не просто присутствие охранника на входе. Это комплексная система безопасности, без которой бизнес несёт серьёзные потери.</p>
+            </div>
+            <ul class="risks-list" data-reveal>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span><strong>Кражи товаров.</strong> Воруют как посетители, так и сотрудники. Без антикражных систем и контроля выноса убытки — миллионы в месяц.</span></li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span><strong>Несанкционированный проход.</strong> Служебные входы, грузовые зоны, технические коридоры — через них проникают посторонние.</span></li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span><strong>Конфликты и агрессия.</strong> Споры между клиентами, ссоры с персоналом — без охраны перерастают в драки и судебные иски.</span></li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span><strong>Пожарная безопасность.</strong> Отсутствие контроля за системами пожаротушения и эвакуационными выходами — прямая угроза жизни.</span></li>
+                <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg><span><strong>Террористические угрозы.</strong> ТЦ — привлекательная цель. <strong>Охрана с оружием</strong> — не рекомендация, а требование антитеррористической защищённости.</span></li>
+            </ul>
+            <p class="risks-note" data-reveal><strong>Охрана торговых центров и магазинов</strong> — наша специализация. Работаем с любыми форматами: от районных ТЦ до крупных моллов.</p>
+        </div>
+    </section>
+
+    <!-- УСЛУГИ -->
+    <section id="services">
+        <div class="wrap">
+            <div class="sec-head" data-reveal>
+                <span class="kick">Услуги</span>
+                <h2>Что входит в охрану ТЦ</h2>
+                <p>Комплексный подход к безопасности торгового центра. <strong>Охрана ТЦ Москва</strong> — многоуровневая система защиты.</p>
+            </div>
+            <div class="svc-grid">
+                <a class="svc card" href="/fizicheskaya-ohrana/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01M2 21h20"/></svg></span>
+                    <span><b>Контроль доступа</b><p>Пропускной режим для сотрудников, поставщиков и посетителей. Проверка документов, разовые пропуска, контроль служебных входов.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a class="svc card" href="/fizicheskaya-ohrana/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01M2 21h20"/></svg></span>
+                    <span><b>Патрулирование</b><p>Регулярные обходы торговых залов, парковок, служебных зон, фуд-корта и детских площадок. Быстрое выявление конфликтов.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a class="svc card" href="/ohrana-pult/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 12a10 10 0 0 1 20 0M6 12a6 6 0 0 1 12 0"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><path d="m13.2 13.2 4.3 4.3"/></svg></span>
+                    <span><b>Видеонаблюдение</b><p>Камеры в торговых зонах, на парковке, в технических помещениях. Мониторинг 24/7 с записью архива и удалённым доступом.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a class="svc card" href="/ohrana-pult/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01M2 21h20"/></svg></span>
+                    <span><b>Антикражные системы</b><p>Рамки и ворота на выходах, RFID-метки на товарах, контроль выноса крупногабаритных товаров. Предотвращение хищений.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a class="svc card" href="/fizicheskaya-ohrana/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01M2 21h20"/></svg></span>
+                    <span><b>Пожарная безопасность</b><p>Контроль систем пожаротушения, проверка эвакуационных выходов, проведение инструктажей и учебных эвакуаций.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+                <a class="svc card" href="/fizicheskaya-ohrana/" data-reveal>
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 21V7l8-4 8 4v14M9 21v-4h6v4M9 10h.01M15 10h.01M9 14h.01M15 14h.01M2 21h20"/></svg></span>
+                    <span><b>Охрана с оружием</b><p><strong>Охрана торгового центра с оружием</strong> — усиленный пост для объектов повышенной опасности. Охранники с разрешением на ношение служебного оружия.</p></span>
+                    <span class="more">Подробнее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+                </a>
+            </div>
+            <p style="text-align:center; font-size:.9rem; color:var(--mut); margin-top:24px;" data-reveal>
+                <strong>Москва охрана торгового центра</strong> — работаем по всей столице и области. Пример: <strong>торговый центр Гавань охрана</strong> — один из наших объектов.
+            </p>
+        </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section id="prices" style="background:var(--bg2);border-block:1px solid var(--line)">
+        <div class="wrap">
+            <div class="sec-head center" data-reveal>
+                <span class="kick">Тарифы</span>
+                <h2>Стоимость охраны ТЦ</h2>
+                <p>Цена зависит от площади, количества входов, режима работы и уровня вооружения. <strong>Охрана ТЦ заказать</strong> можно с любым бюджетом.</p>
+            </div>
+            <div class="price-wrap" data-reveal>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Режим</th>
+                            <th>Цена от, ₽/мес.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Один пост на входе (без оружия)</td><td>24/7</td><td>190 000</td></tr>
+                        <tr><td>Один пост на входе (с оружием)</td><td>24/7</td><td>240 000</td></tr>
+                        <tr><td>Патрулирование (1 патрульный)</td><td>24/7</td><td>200 000</td></tr>
+                        <tr><td>Видеонаблюдение (установка + мониторинг)</td><td>24/7</td><td>от 25 000</td></tr>
+                        <tr><td>Комплекс (2 поста + патруль + видео)</td><td>12/7</td><td>от 450 000</td></tr>
+                        <tr><td>Временная охрана (мероприятия, праздники)</td><td>По графику</td><td>от 17 500 / сутки</td></tr>
+                    </tbody>
+                </table>
+                <p class="price-note"><i>Точная стоимость рассчитывается после выезда специалиста на объект. <strong>Охрана торгового центра ЧОП</strong> — прозрачные тарифы.</i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЭТАПЫ -->
+    <section id="steps">
+        <div class="wrap">
+            <div class="sec-head" data-reveal>
+                <span class="kick">Порядок работы</span>
+                <h2>Как организуется охрана ТЦ</h2>
+                <p>От анализа объекта до запуска охраны — 4 шага.</p>
+            </div>
+            <div class="steps">
+                <div class="step card" data-reveal><span class="step-n">01</span><b>Анализ объекта</b><p>Изучаем планировку, количество входов, парковку, служебные зоны, расположение магазинов и фуд-корта.</p></div>
+                <div class="step card" data-reveal><span class="step-n">02</span><b>План охраны</b><p>Разрабатываем схему постов, маршруты патрулирования, схему установки камер и антикражных рамок.</p></div>
+                <div class="step card" data-reveal><span class="step-n">03</span><b>Подбор персонала</b><p>Назначаем охранников с соответствующими разрядами, при необходимости — с лицензией на оружие.</p></div>
+                <div class="step card" data-reveal><span class="step-n">04</span><b>Запуск и мониторинг</b><p>Выводим посты, настраиваем оборудование, проводим инструктаж. Ведём ежедневные отчёты.</p></div>
+            </div>
+            <p style="text-align:center; font-size:.9rem; color:var(--mut); margin-top:24px;" data-reveal>
+                <strong>Охрана тц заказать</strong> можно по телефону или через форму на сайте. Выезд специалиста — бесплатно.
+            </p>
+        </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section id="why">
+        <div class="wrap">
+            <div class="sec-head" data-reveal>
+                <span class="kick">Почему мы</span>
+                <h2>Почему выбирают «Рускорпорацию»</h2>
+                <p>Мы — <strong>ЧОП охрана торгового центра</strong> с многолетним опытом и действующей лицензией.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why card" data-reveal data-n="1">
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg></span>
+                    <b>Лицензия Росгвардии</b>
+                    <p>№ Л056-00106-59/00033018. <strong>Охрана ТЦ</strong> — работаем строго по закону.</p>
+                </div>
+                <div class="why card" data-reveal data-n="2">
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg></span>
+                    <b>Оружие и спецсредства</b>
+                    <p><strong>Охрана торгового центра с оружием</strong> — наши сотрудники имеют разрешение на ношение служебного оружия.</p>
+                </div>
+                <div class="why card" data-reveal data-n="3">
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg></span>
+                    <b>Круглосуточный контроль</b>
+                    <p>Диспетчерская и ГБР работают 24/7. Быстрое реагирование на любые инциденты.</p>
+                </div>
+                <div class="why card" data-reveal data-n="4">
+                    <span class="obj-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg></span>
+                    <b>Материальная ответственность</b>
+                    <p>Полная компенсация ущерба по договору. <strong>Охрана торговых центров и магазинов</strong> — мы отвечаем за результат.</p>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:24px;" data-reveal>
+                <p style="font-size:.9rem; color:var(--mut);">
+                    <strong>Охрана тц Москва</strong> — география: МКАД, Новая Москва, область. Пример: <strong>торговый центр Гавань охрана</strong> — наш постоянный клиент.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" style="background:var(--bg2);border-block:1px solid var(--line)">
+        <div class="wrap">
+            <div class="sec-head center" data-reveal>
+                <span class="kick">FAQ</span>
+                <h2>Частые вопросы об охране ТЦ</h2>
+                <p>Ответы на самые популярные <strong>вопросы охрана ТЦ</strong>.</p>
+            </div>
+            <div class="faq-list" id="faqList" data-reveal></div>
+            <p style="text-align:center; font-size:.9rem; color:var(--mut); margin-top:20px;" data-reveal>
+                Полный перечень услуг по <strong>охране торговых центров</strong> доступен по запросу.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta">
+        <div class="wrap">
+            <div class="cta-block" data-reveal>
+                <div class="cta-title">Закажите охрану торгового центра</div>
+                <p>Бесплатный выезд специалиста, оценка объекта и расчёт стоимости в день обращения. <strong>Охрана ТЦ Москва</strong> — работаем 24/7, без выходных.</p>
+                <a class="btn btn-amber" href="/kontakty/">Связаться с нами →</a>
+            </div>
+            <div style="text-align:center; margin-top:18px;" data-reveal>
+                <p style="font-size:.9rem; color:var(--mut);">
+                    <strong>Охрана тц заказать</strong> — позвоните <a href="tel:+79250474225" style="color:var(--amber2); font-weight:700;">+7 (925) 047-42-25</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФОРМА -->
+    <section id="zayavka">
+        <div class="wrap form-grid">
+            <div data-reveal>
+                <span class="kick">Заявка</span>
+                <h2>Оставьте заявку на охрану ТЦ</h2>
+                <ul class="form-perks">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Заполните форму, мы свяжемся с вами в течение 15 минут для бесплатной консультации</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Z"/></svg>Выезд специалиста на объект — бесплатно</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>Фиксированная стоимость в договоре</li>
+                </ul>
+            </div>
+            <div class="form-panel" data-reveal>
+                <form id="leadForm">
+                    <div class="field"><label for="fName">Имя</label><input type="text" id="fName" required placeholder="Как к вам обращаться"></div>
+                    <div class="field"><label for="fPhone">Телефон</label><input type="tel" id="fPhone" required placeholder="+7 (___) ___-__-__"></div>
+                    <div class="field">
+                        <label for="fType">Тип объекта</label>
+                        <select id="fType">
+                            <option>Выберите тип объекта</option>
+                            <option>Торговый центр</option>
+                            <option>Магазин</option>
+                            <option>Склад</option>
+                            <option>Офис</option>
+                            <option>Другое</option>
+                        </select>
+                    </div>
+                    <label class="check-row"><input type="checkbox" id="fUrgent">Нужен срочный выезд специалиста сегодня</label>
+                    <button class="btn btn-amber" type="submit">Отправить заявку</button>
+                    <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных в соответствии с политикой конфиденциальности.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="wrap">
+            <div class="ft-grid">
+                <div class="ft-about">
+                    <a class="brand" href="/">
+                        <span class="brand-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5.5v5.2c0 4.9 3.4 9.5 8 10.8 4.6-1.3 8-5.9 8-10.8V5.5L12 2Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4Z"/></svg></span>
+                        <span><span class="brand-name">РУСКОРПОРАЦИЯ</span><br><span class="brand-sub">охрана и консалтинг</span></span>
+                    </a>
+                    <p>Лицензированный ЧОП «Рускорпорация» — профессиональная охрана объектов и людей с 2018 года.</p>
+                    <span class="ft-247">● Круглосуточно, без выходных</span>
+                </div>
+                <div>
+                    <h4>Услуги</h4>
+                    <a href="/fizicheskaya-ohrana/">Физическая охрана</a>
+                    <a href="/ohrana-fizicheskih-lic/">Охрана физ лиц</a>
+                    <a href="/ohrana-yuridicheskih-lic/">Для юрлиц</a>
+                    <a href="/ohrana-pult/">Пультовая охрана</a>
+                </div>
+                <div>
+                    <h4>Информация</h4>
+                    <a href="/dogovor/">Договор охраны</a>
+                    <a href="/ohrana-moskovskaya-oblast/">Регионы</a>
+                    <a href="/kontakty/">Контакты</a>
+                    <a href="/stati/">Статьи</a>
+                </div>
+                <div>
+                    <h4>Связаться</h4>
+                    <a href="tel:+79250474225">+7 (925) 047-42-25</a>
+                    <a href="mailto:fizohrana@ruscor24.ru">fizohrana@ruscor24.ru</a>
+                    <a href="https://t.me/Almaz77777" target="_blank" rel="noopener">Telegram</a>
+                    <a href="https://wa.me/79771340739" target="_blank" rel="noopener">WhatsApp</a>
+                </div>
+            </div>
+            <div class="ft-legal">
+                <div>
+                    <h5>Реквизиты</h5>
+                    <p>ООО ЧОП «Рускорпорация»<br>ИНН: 5902050810 · КПП: 590501001<br>ОГРН: 1185958064665</p>
+                </div>
+                <div>
+                    <h5>Лицензия</h5>
+                    <p>№ Л056-00106-59/00033018<br>от 29.11.2018 г.<br>Выдана: УР по Пермскому краю</p>
+                </div>
+                <div>
+                    <h5>География работы</h5>
+                    <ul>
+                        <li>Москва и Московская область</li>
+                        <li>Пермь, Пермский край</li>
+                        <li>Сочи, Краснодарский край</li>
+                        <li>Санкт-Петербург</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ft-bottom">
+            <div class="wrap">© 2018–2026 ООО ЧОП «Рускорпорация охрана и консалтинг» — охрана объектов и физических лиц. Все права защищены.</div>
+        </div>
+    </footer>
+
+    <!-- ЧАТ -->
+    <div class="chat-panel" id="chatPanel">
+        <h4>Нужна помощь? Онлайн-консультант</h4>
+        <p>Остались вопросы? Получите бесплатную консультацию за 2 минуты. Мы онлайн!</p>
+        <a class="btn btn-amber" href="https://wa.me/79771340739" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        <a class="btn btn-ghost" href="https://t.me/Almaz77777" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <button class="chat-btn" id="chatBtn" aria-label="Онлайн-консультант">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4c-1.3 0-2.6-.3-3.7-.8L3 21l1.9-5.3a8.4 8.4 0 1 1 16.1-4.2Z"/><path d="M8.5 10.5h7M8.5 13.5h4"/></svg>
+    </button>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // ---------- МОБИЛЬНОЕ МЕНЮ ----------
+            var burger = document.getElementById('burger'),
+                nav = document.getElementById('nav');
+            if (burger && nav) {
+                burger.addEventListener('click', function() {
+                    var open = nav.classList.toggle('open');
+                    burger.classList.toggle('open', open);
+                    burger.setAttribute('aria-expanded', open);
+                });
+                nav.querySelectorAll('a').forEach(function(a) {
+                    a.addEventListener('click', function() {
+                        nav.classList.remove('open');
+                        burger.classList.remove('open');
+                        burger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // ---------- ТАЙМЕР ----------
+            function pad(n) { return String(n).padStart(2, '0'); }
+
+            function tickTimer() {
+                var now = new Date();
+                var end = new Date(now.getFullYear(), now.getMonth() + 1, 1, 0, 0, 0);
+                var d = Math.max(0, Math.floor((end - now) / 1000));
+                var elD = document.getElementById('cdD'),
+                    elH = document.getElementById('cdH'),
+                    elM = document.getElementById('cdM'),
+                    elS = document.getElementById('cdS');
+                if (elD) elD.textContent = pad(Math.floor(d / 86400));
+                if (elH) elH.textContent = pad(Math.floor(d % 86400 / 3600));
+                if (elM) elM.textContent = pad(Math.floor(d % 3600 / 60));
+                if (elS) elS.textContent = pad(d % 60);
+            }
+            tickTimer();
+            setInterval(tickTimer, 1000);
+
+            // ---------- REVEAL ----------
+            var revealEls = document.querySelectorAll('[data-reveal]');
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(e) {
+                        if (e.isIntersecting) {
+                            e.target.classList.add('in');
+                            io.unobserve(e.target);
+                        }
+                    });
+                }, { threshold: .15 });
+                revealEls.forEach(function(el, i) {
+                    if (!el.style.transitionDelay) {
+                        el.style.transitionDelay = (i % 6) * 70 + 'ms';
+                    }
+                    io.observe(el);
+                });
+            } else {
+                revealEls.forEach(function(el) { el.classList.add('in'); });
+            }
+
+            // ---------- FAQ ----------
+            var faqs = [
+                ['Какая охрана нужна для торгового центра?',
+                    'Для ТЦ рекомендуется комплексная система: <strong>охрана ТЦ</strong> включает посты на входах, патрулирование, видеонаблюдение и антикражные рамки. Для крупных объектов — вооружённая охрана и круглосуточный мониторинг.'
+                ],
+                ['Можно ли заказать охрану ТЦ только на ночь?',
+                    'Да, ночной пост — востребованная услуга. Ночью ТЦ закрыт, но остаётся дорогое оборудование и товары. Мы можем выставить одного или нескольких охранников на ночное время.'
+                ],
+                ['Нужна ли вооружённая охрана в торговом центре?',
+                    'Для крупных ТЦ с большим потоком посетителей — да. <strong>Охрана торгового центра с оружием</strong> является требованием антитеррористической защищённости и рекомендацией Росгвардии.'
+                ],
+                ['Как организуется контроль посетителей?',
+                    'На входах работают посты, которые следят за соблюдением правил. При необходимости — досмотр сумок, проверка документов. На выходах — антикражные рамки и контроль выноса товара.'
+                ],
+                ['Сколько стоит охрана ТЦ в месяц?',
+                    'Стоимость зависит от площади, количества входов, режима работы и оснащения. Базовый пост без оружия — от 190 000 ₽/мес. Комплексный пакет — от 450 000 ₽/мес. Точный расчёт после выезда специалиста.'
+                ],
+                ['Какие нормативные акты регулируют охрану ТЦ?',
+                    'Основные документы: ФЗ «Об охране», Постановление Правительства № 272 «Об антитеррористической защищённости», приказы Росгвардии. Мы работаем строго в рамках законодательства.'
+                ],
+                ['Можете ли вы охранять строительный ТЦ до открытия?',
+                    'Да, мы охраняем строящиеся торговые центры на этапе строительства и отделки. Это предотвращает кражу материалов, техники и вандализм.'
+                ],
+                ['Вы работаете только в Москве?',
+                    'Основные регионы — Москва и Московская область. Также работаем в Перми, Сочи и Санкт-Петербурге.'
+                ]
+            ];
+            var faqList = document.getElementById('faqList');
+            if (faqList) {
+                faqList.innerHTML = faqs.map(function(f, i) {
+                    return '<div class="faq-item' + (i === 0 ? ' open' : '') + '">' +
+                        '<button class="faq-q" type="button" aria-expanded="' + (i === 0) + '"><span>' + f[
+                        0] + '</span><span class="pm">+</span></button>' +
+                        '<div class="faq-a"><p>' + f[1] + '</p></div></div>';
+                }).join('');
+
+                function setFaq(item) {
+                    var a = item.querySelector('.faq-a'),
+                        open = item.classList.contains('open');
+                    faqList.querySelectorAll('.faq-item').forEach(function(it) {
+                        it.classList.remove('open');
+                        it.querySelector('.faq-a').style.maxHeight = null;
+                        it.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+                    });
+                    if (!open) {
+                        item.classList.add('open');
+                        a.style.maxHeight = a.scrollHeight + 'px';
+                        item.querySelector('.faq-q').setAttribute('aria-expanded', 'true');
+                    }
+                }
+                faqList.querySelectorAll('.faq-q').forEach(function(q) {
+                    q.addEventListener('click', function() { setFaq(q.parentElement); });
+                });
+                var first = faqList.querySelector('.faq-item.open .faq-a');
+                if (first) first.style.maxHeight = first.scrollHeight + 'px';
+            }
+
+            // ---------- ФОРМА ----------
+            var leadForm = document.getElementById('leadForm');
+            if (leadForm) {
+                leadForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var name = document.getElementById('fName').value.trim() || 'клиент';
+                    this.innerHTML = '<div class="form-ok"><div class="ok-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+                        '<h3 style="margin-bottom:10px">Спасибо, ' + name + '!</h3>' +
+                        '<p style="color:var(--mut)">Заявка принята. Мы свяжемся с вами в течение 15 минут для бесплатной консультации.</p></div>';
+                });
+            }
+
+            // ---------- ЧАТ ----------
+            var chatBtn = document.getElementById('chatBtn'),
+                chatPanel = document.getElementById('chatPanel');
+            if (chatBtn && chatPanel) {
+                chatBtn.addEventListener('click', function() { chatPanel.classList.toggle('open'); });
+                document.addEventListener('click', function(e) {
+                    if (!chatPanel.contains(e.target) && !chatBtn.contains(e.target)) chatPanel.classList.remove(
+                    'open');
+                });
+            }
+
+            // ---------- ПРОГРЕСС-БАР ----------
+            var bar = document.getElementById('progress');
+            if (bar) {
+                window.addEventListener('scroll', function() {
+                    var h = document.documentElement;
+                    var p = h.scrollTop / (h.scrollHeight - h.clientHeight) * 100;
+                    bar.style.width = p + '%';
+                }, { passive: true });
+            }
+        })();
+    </script>
+
+    <!-- ССЫЛКИ НА КАРТОЧКИ ОБЪЕКТОВ (автоматическая подстановка) -->
+    <style>
+        a.obj-link {
+            display: block;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+        a.obj-link>* {
+            height: 100%;
+        }
+    </style>
+</body>
+</html>
